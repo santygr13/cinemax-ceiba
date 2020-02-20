@@ -1,0 +1,80 @@
+<app-header></app-header>
+<div class="jumbotron">
+  <h1 class="display-6">CREAR RESERVA</h1>
+  <form #form="ngForm">
+    <div class="form-row">
+      <div class="form-group col-md-2">
+        <label for="inputDocumentoCliente">Numero cedula</label>
+        <input type="text" pattern="^[0-9]+" class="form-control" id="inputDocumentoCliente"
+          placeholder="Documento Cliente" [(ngModel)]="reserva.documentoCliente" name="documentoCliente" required
+          #documentoCliente="ngModel">
+        <div class="alert alert-danger"
+          *ngIf="documentoCliente.invalid && (documentoCliente.dirty || documentoCliente.touched)">
+          <div *ngIf="documentoCliente.errors.required">
+            El numero de documento es requerido
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group col-md-2">
+        <label for="inputNombreCliente">Nombre Cliente</label>
+        <input type="text" class="form-control" id="inputNombreCliente" placeholder="Nombre Cliente"
+          [(ngModel)]="reserva.nombreCliente" name="nombreCliente" required #nombreCliente="ngModel">
+        <div class="alert alert-danger" *ngIf="nombreCliente.invalid && (nombreCliente.dirty || nombreCliente.touched)">
+          <div *ngIf="nombreCliente.errors.required">
+            El nombre del cliente es requerido
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group col-md-6">
+        <label for="inputCantidadPuestos">Cantidad Entradas</label>
+        <input type="number" min="1" pattern="^[0-9]+" class="form-control" id="inputCantidadPuestos"
+          placeholder="Cantidad Entradas" [(ngModel)]="reserva.cantidadPuestos" name="cantidadPuestos" required
+          #cantidadPuestos="ngModel">
+        <div class="alert alert-danger"
+          *ngIf="cantidadPuestos.invalid && (cantidadPuestos.dirty || cantidadPuestos.touched)">
+          <div *ngIf="cantidadPuestos.errors.required">
+            El numero de entradas es requerido
+          </div>
+        </div>
+      </div>
+
+      <div class="input-field col s3">
+        <label for="myListOptions">Nombre Pelicula</label>
+        <select class="form-control" name="nombrePelicula " [(ngModel)]="reserva.nombrePelicula">
+
+          <option *ngFor="let pelicula of pelicula" [ngValue]="pelicula.nombre">
+            {{pelicula.nombre}}</option>
+        </select>
+
+      </div>
+
+
+      <div class="form-group col-md-4">
+        <label for="inputFechaReservaPelicula">Fecha Reserva</label>
+        <input type="date" class="form-control" id="inputFechaReservaPelicula" placeholder="YYYY-MM-DD"
+          [(ngModel)]="reserva.fechaReservaPelicula" name="fechaReservaPelicula" required
+          #fechaReservaPelicula="ngModel">
+        <div class="alert alert-danger"
+          *ngIf="fechaReservaPelicula.invalid && (fechaReservaPelicula.dirty || fechaReservaPelicula.touched)">
+          <div *ngIf="fechaReservaPelicula.errors.required">
+            La fecha de reserva es requerida
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="btn-group" role="group" aria-label="Basic example">
+      <button type="submit" class="btn btn-primary" (click)="OnSubmit(form)" id="btnCrearReserva"
+        [disabled]="documentoCliente.invalid || nombreCliente.invalid || cantidadPuestos.invalid || fechaReservaPelicula.invalid">Crear</button>
+    </div>
+
+    <div class="btn-group" role="group" aria-label="Basic example">
+      <button type="button" class="btn btn-danger" [routerLink]="['/principal']" id="btnVolverPrincipal">Volver</button>
+    </div>
+  </form>
+</div>
+<app-footer></app-footer>

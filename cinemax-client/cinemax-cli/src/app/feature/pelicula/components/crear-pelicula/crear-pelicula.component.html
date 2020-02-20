@@ -1,0 +1,46 @@
+<app-header></app-header>
+<div class="jumbotron">
+    <h1 class="display-6">CREAR PELICULA</h1>
+    <form #form="ngForm">
+        <div class="form-row">
+
+
+            <div class="form-group col-md-6">
+                <label for="inputnombre">Nombre Pelicula</label>
+                <input type="text" class="form-control" id="inputnombre" placeholder="Nombre Pelicula"
+                    [(ngModel)]="pelicula.nombre" name="nombre" required #nombre="ngModel">
+                <div class="alert alert-danger" *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)">
+                    <div *ngIf="nombre.errors.required">
+                        El nombre es requerido
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-field col s3">
+                <label for="myListOptions">Numero de Sala</label>
+                <select class="form-control" name="numeroSalaCine" [(ngModel)]="pelicula.numeroSalaCine"
+                    #numeroSalaCine="ngModel">
+                    <option *ngFor="let salaCine of salaCine" [ngValue]="salaCine.numeroSalaCine">
+                        {{salaCine.numeroSalaCine}}
+                    </option>
+                </select>
+            </div>
+
+
+
+        </div>
+
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="submit" class="btn btn-primary" (click)="OnSubmit(form)" id="btnCrearPelicula"
+                [disabled]="nombre.invalid || numeroSalaCine.invalid">Crear</button>
+        </div>
+
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-danger" [routerLink]="['/principal']"
+                id="btnVolverPrincipal">Volver</button>
+
+        </div>
+
+    </form>
+</div>
+<app-footer></app-footer>

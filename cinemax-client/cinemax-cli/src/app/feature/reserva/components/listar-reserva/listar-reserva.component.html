@@ -1,0 +1,45 @@
+<app-header></app-header>
+<form #form="ngForm">
+  <div class="card border-primary mb-3">
+    <div class="card-header">Reservas</div>
+    <div class="card-body text-primary">
+      <h5 class="card-title">Listado de Reservas</h5>
+      <div class="my-2 text-left">
+        <button class="btn btn-rounded btn-primary" type="button" [routerLink]="['/reserva']">
+          Crear Reserva
+        </button>
+      </div>
+      <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>Documento Cliente</th>
+            <th>Nombre Cliente</th>
+            <th>Cantidad Entradas</th>
+            <th>Nombre Pelicula</th>
+            <th>Fecha Reserva</th>
+
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let reserva of reserva">
+            <td>{{ reserva.documentoCliente }} </td>
+            <td>{{ reserva.nombreCliente }}</td>
+            <td>{{ reserva.cantidadPuestos }}</td>
+            <td>{{ reserva.nombrePelicula }}</td>
+            <td>{{ reserva.fechaReservaPelicula }}</td>
+
+
+
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="btn-group" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-danger" [routerLink]="['/principal']"
+          id="btnVolverPrincipal">Volver</button>
+      </div>
+    </div>
+  </div>
+</form>
+<app-footer></app-footer>

@@ -1,0 +1,38 @@
+<app-header></app-header>
+<form #form="ngForm">
+  <div class="card border-primary mb-3">
+    <div class="card-header">Peliculas</div>
+    <div class="card-body text-primary">
+      <h5 class="card-title">Listado de Peliculas</h5>
+      <div class="my-2 text-left">
+        <button class="btn btn-rounded btn-primary" type="button" [routerLink]="['/pelicula']">
+          Crear Pelicula
+        </button>
+      </div>
+      <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>nombre</th>
+            <th>Numero de Sala</th>
+
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let pelicula of pelicula">
+            <td>{{ pelicula.nombre }} </td>
+            <td>{{ pelicula.numeroSalaCine }}</td>
+
+
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="btn-group" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-danger" [routerLink]="['/principal']"
+          id="btnVolverPrincipal">Volver</button>
+      </div>
+    </div>
+  </div>
+</form>
+<app-footer></app-footer>

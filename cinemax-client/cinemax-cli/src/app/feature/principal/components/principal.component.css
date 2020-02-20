@@ -1,0 +1,31 @@
+.jumbotron{
+    background: url('../../../../assets/img/backgrounds/1.jpg') #281a0c;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center 0 ;
+}
+.jumbotron .display-6{
+    color: #fff;  
+}
+
+.jumbotron .lead{
+    color: #fff; 
+}
+
+.jumbotron .descripcion{
+    color: #fff;
+}
+
+.mapa{
+    margin-top: -30px;
+}
+
+.contenedorPri{
+    width: 100%;
+    background:#fff;
+}
+
+.image{
+    height: 100%;
+    width: 100%;
+}
