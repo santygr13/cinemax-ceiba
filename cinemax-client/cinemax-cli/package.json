@@ -4,11 +4,12 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --proxy-config proxy.conf.json",
-
-    "build": "ng build",
-    "test": "ng test",
+    "build": "ng build --prod",
+    "test": "ng test --code-coverage",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "pree2e": "webdriver-manager clean && webdriver-manager update --versions.chrome=79.0.3945.130",
+    "e2e": "ng e2e --webdriver-update false",
+    "test-headless": "ng test --watch=false --code-coverage --browsers=ChromeHeadless"
   },
   "private": true,
   "dependencies": {

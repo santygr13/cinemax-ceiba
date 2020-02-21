@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.ceiba.cinemax.dominio.servicio.pelicula.ServicioCrearPeliculaTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-02-20T23:19:50" hostname="SANTIAGO-GARCIA" time="1.242">
+<testsuite name="com.ceiba.cinemax.dominio.servicio.pelicula.ServicioCrearPeliculaTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-02-21T11:35:03" hostname="SANTIAGO-GARCIA" time="0.272">
   <properties/>
-  <testcase name="validarExistenciaDePeliculaTest()" classname="com.ceiba.cinemax.dominio.servicio.pelicula.ServicioCrearPeliculaTest" time="1.242"/>
+  <testcase name="ejecutarTest()" classname="com.ceiba.cinemax.dominio.servicio.pelicula.ServicioCrearPeliculaTest" time="0.209"/>
+  <testcase name="validarNoExistenciaSalaCineTest()" classname="com.ceiba.cinemax.dominio.servicio.pelicula.ServicioCrearPeliculaTest" time="0.055"/>
+  <testcase name="validarExistenciaDePeliculaTest()" classname="com.ceiba.cinemax.dominio.servicio.pelicula.ServicioCrearPeliculaTest" time="0.002"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

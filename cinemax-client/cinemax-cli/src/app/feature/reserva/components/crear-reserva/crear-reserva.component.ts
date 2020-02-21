@@ -30,14 +30,12 @@ export class CrearReservaComponent implements OnInit {
   }
 
   getpeliculas() {
-    this.servicioPelicula.getPeliculas().subscribe((data: any) => {
-      data.forEach(obj => obj.selector = false);
-      this.pelicula = data;
-      console.log(this.pelicula)
-    });
+    this.servicioPelicula.getPeliculas().subscribe((data: any) => this.pelicula = data)
+    console.log(this.pelicula)
 
   }
 
+  
   OnSubmit(form: NgForm) {
     this.reservaService.create(this.reserva)
       .subscribe(Response => {

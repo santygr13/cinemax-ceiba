@@ -27,7 +27,7 @@ describe('CineMaxApp interaction', function () {
     path = require('path');
 
     it('Navegacion, pagina principal de la aplicacion', function () {
-        browser.get('http://localhost:4200/');
+        browser.get('http://http://localhost:4200/');
 
         expect(browser.getTitle()).toEqual('CineMaxApp');
 
@@ -38,7 +38,7 @@ describe('CineMaxApp interaction', function () {
         browser.get('http://localhost:4200/');
         element(by.id('crear-salacine')).click();
 
-        expect(browser.getCurrentUrl()).toBe('http://localhost:4200/salacine');
+        expect(browser.getCurrentUrl()).toBe('http://localhost:4200/#/salacine');
         browser.sleep(1000);
     });
 
@@ -47,7 +47,7 @@ describe('CineMaxApp interaction', function () {
         browser.get('http://localhost:4200/salacine');
         element(by.id('inputnumeroSalaCine')).sendKeys(salacine.numeroSalaCine);
         element(by.id('inputcapacidadsillas')).sendKeys(salacine.capacidadSillas);
-        element(by.id('myListOptions')).sendKeys(salacine.estadoSalaCine);
+        element(by.id('listaOpciones')).sendKeys(salacine.estadoSalaCine);
 
         browser.sleep(1000);
         element(by.id('btnCrearSalaCine')).click();
@@ -77,7 +77,7 @@ describe('CineMaxApp interaction', function () {
     it('Crear pelicula', function () {
         browser.get('http://localhost:4200/pelicula');
         element(by.id('inputnombre')).sendKeys(pelicula.nombre);
-        element(by.id('myListOptions')).sendKeys(pelicula.numeroSalaCine);
+        element(by.id('listaOpciones')).sendKeys(pelicula.numeroSalaCine);
 
         browser.sleep(1000);
         element(by.id('btnCrearPelicula')).click();
@@ -109,7 +109,7 @@ describe('CineMaxApp interaction', function () {
         element(by.id('inputDocumentoCliente')).sendKeys(reserva.documentoCliente);
         element(by.id('inputNombreCliente')).sendKeys(reserva.nombreCliente);
         element(by.id('inputCantidadPuestos')).sendKeys(reserva.cantidadPuestos);
-        element(by.id('myListOptions')).sendKeys(reserva.nombrePelicula);
+        element(by.id('listaOpciones')).sendKeys(reserva.nombrePelicula);
         element(by.id('inputFechaReservaPelicula')).sendKeys(reserva.fechaReservaPelicula);
 
         browser.sleep(1000);

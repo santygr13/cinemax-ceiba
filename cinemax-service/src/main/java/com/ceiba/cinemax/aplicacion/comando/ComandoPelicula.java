@@ -17,4 +17,6 @@ public class ComandoPelicula {
     private String nombre;
     private SalaCine salaCine;
     private String numeroSalaCine;
+
+
 }

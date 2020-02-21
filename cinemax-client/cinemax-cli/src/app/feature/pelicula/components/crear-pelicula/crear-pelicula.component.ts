@@ -34,7 +34,7 @@ export class CrearPeliculaComponent implements OnInit {
       this.salaCine = data;
       console.log(this.salaCine)
     });
-    console.log(this.salaCine)
+
 
 
   }

@@ -28,7 +28,6 @@ export class ListarPeliculaComponent implements OnInit {
     }
     getPeliculas() {
         this.peliculaService.getPeliculas().subscribe((data: any) => {
-            data.forEach(obj => obj.selector = false);
             this.pelicula = data;
         });
     }

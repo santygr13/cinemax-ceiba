@@ -32,7 +32,7 @@ public class ServicioCrearPeliculaTest {
             servicioCrearPelicula.ejecutar(pelicula1);
             servicioCrearPelicula.ejecutar(pelicula2);
 
-            
+
         }catch (ExcepcionDuplicidad e){
             Assertions.assertEquals(LA_PELICULA_YA_EXISTE,e.getMessage());
         }

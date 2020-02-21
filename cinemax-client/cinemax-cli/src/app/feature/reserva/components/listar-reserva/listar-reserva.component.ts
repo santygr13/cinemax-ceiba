@@ -21,7 +21,6 @@ export class ListarReservaComponent implements OnInit {
 
   getReservas() {
     this.reservaService.getRservas().subscribe((data: any) => {
-      data.forEach(obj => obj.selector = false);
       this.reserva = data;
     });
   }
