@@ -36,6 +36,7 @@ public class RepositorioReservaPostgreSql implements RepositorioReserva {
         repositorioReservaJpa.save(reservaEntidad);
     }
 
+    @Override
     public List<ReservaDto> listar() {
         List<ReservaEntidad> listReservaEntidad = repositorioReservaJpa.findAll();
         List<ReservaDto> listReserva=new ArrayList<>();

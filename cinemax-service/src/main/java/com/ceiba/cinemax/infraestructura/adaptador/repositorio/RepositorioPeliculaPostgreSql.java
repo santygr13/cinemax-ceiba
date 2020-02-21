@@ -46,7 +46,7 @@ public class RepositorioPeliculaPostgreSql implements RepositorioPelicula {
     }
 
 
-
+    @Override
     public List<PeliculaDto> listar() {
         List<PeliculaEntidad> listPeliculaEntidad = repositorioPeliculaJpa.findAll();
         List<PeliculaDto> listReserva=new ArrayList<>();

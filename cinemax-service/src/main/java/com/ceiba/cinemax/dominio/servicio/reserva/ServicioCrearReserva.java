@@ -31,13 +31,13 @@ public class ServicioCrearReserva {
         if (existe){
             throw new ExcepcionExistenciaPelicula(LA_PELICULA_NO_EXISTE);
         }
-
     }
 
 
     public void ejecutar(Reserva reserva){
         reserva.setFactura(servicioCrearFactura.construirFactura(reserva));
         this.validarExistenciaPelicula(reserva.getNombrePelicula());
+
         servicioCapacidadSalaCine.reducirCapacidadSalaCine(reserva.getNombrePelicula(),reserva.getCantidadPuestos());
         this.repositorioReserva.guardar(reserva);
     }

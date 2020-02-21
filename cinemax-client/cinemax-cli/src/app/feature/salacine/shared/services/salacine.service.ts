@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 import { SalaCine } from '../model/salacine';
-import { map } from 'rxjs/operators';
 import { HttpClient} from '@angular/common/http';
-import { Observable } from 'rxjs';
 import { BaseService } from 'src/app/core/services/base.service';
 import { environment } from 'src/environments/environment';
 

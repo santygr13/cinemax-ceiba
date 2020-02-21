@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.ceiba.cinemax.dominio.modelo.FacturaTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-02-21T11:35:00" hostname="SANTIAGO-GARCIA" time="0.011">
+<testsuite name="com.ceiba.cinemax.dominio.modelo.FacturaTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-02-21T17:01:15" hostname="SANTIAGO-GARCIA" time="0.003">
   <properties/>
-  <testcase name="funcionamientoGetterAndSetterDeFacturaTest()" classname="com.ceiba.cinemax.dominio.modelo.FacturaTest" time="0.011"/>
+  <testcase name="funcionamientoGetterAndSetterDeFacturaTest()" classname="com.ceiba.cinemax.dominio.modelo.FacturaTest" time="0.003"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
