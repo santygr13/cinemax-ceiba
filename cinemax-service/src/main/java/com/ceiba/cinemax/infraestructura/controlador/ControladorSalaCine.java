@@ -7,7 +7,7 @@ import com.ceiba.cinemax.aplicacion.consulta.manejador.salacine.ManejadorListarS
 import com.ceiba.cinemax.dominio.modelo.dto.SalaCineDto;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.client.RestClientResponseException;
+
 
 import java.util.List;
 

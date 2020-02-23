@@ -71,11 +71,11 @@ describe('CineMaxApp interaction', function () {
     it('Crear pelicula', function () {
         browser.get('http://localhost:4200/#/pelicula');
         element(by.id('inputnombre')).sendKeys(pelicula.nombre);
-  //      element(by.id('listaOpciones')).$('[value="salaCine.numeroSalaCine"]').click();
-
-        browser.sleep(1000);
+        element(by.id('listaOpciones')).$('[value="1000"]').click();
+        browser.sleep(1000000);
         element(by.id('btnCrearPelicula')).click();
         element(by.buttonText('Crear')).click();
+        
 
     });
 

@@ -26,7 +26,7 @@ public class ServicioCapacidadSalaCine {
         SalaCine salaCine=repositorioSalaCine.filtroCapacidadPorNombrePelicula(nombrePelicula);
         ConvertidorSalaCine convertidorSalaCine= new ConvertidorSalaCine();
         SalaCineEntidad salaCineEntidad= convertidorSalaCine.convertirSalaCineDominioAEntidad(salaCine);
-        return salaCineEntidad.getCapacidadSillas() > 0 && salaCineEntidad.getCapacidadSillas() >= cantidadEntradas ? true:false;
+        return salaCineEntidad.getCapacidadSillas() > 0 && salaCineEntidad.getCapacidadSillas() >= cantidadEntradas ;
     }
 
 

@@ -9,6 +9,8 @@ import java.time.LocalDate;
 public  class ValidadorArgumento {
 
 
+    private ValidadorArgumento() {
+    }
 
     public static void validarCampoObligatorio(Object valor , String mensaje){
         if(valor==null){
@@ -35,11 +37,6 @@ public  class ValidadorArgumento {
             throw new ExcepcionCantidadPositiva(mensaje);
         }
     }
-
-
-
-
-
 
 
 }

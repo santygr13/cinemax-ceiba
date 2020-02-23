@@ -14,7 +14,7 @@ import java.util.concurrent.ConcurrentHashMap;
 @ControllerAdvice
 public class ManejadorError extends ResponseEntityExceptionHandler {
 
-    private static final Logger LOGGER_ERROR = LoggerFactory.getLogger(ManejadorError.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(ManejadorError.class);
     private static final String OCURRIO_UN_ERROR_CONTACTAR_AL_ADMINISTRADOR = "Ocurrio un error, porfavor contactar al administrador";
 
     private static final ConcurrentHashMap<String, Integer> CODIGO_ESTADO = new ConcurrentHashMap<>();
@@ -45,7 +45,7 @@ public class ManejadorError extends ResponseEntityExceptionHandler {
             Error error = new Error(excepcionNombre,mensaje);
             resultado=new ResponseEntity<>(error,HttpStatus.valueOf(codigo));
         }else {
-            LOGGER_ERROR.error(excepcionNombre,exception);
+            LOGGER.error(excepcionNombre,exception);
             Error error = new Error(excepcionNombre, OCURRIO_UN_ERROR_CONTACTAR_AL_ADMINISTRADOR);
             resultado=new ResponseEntity<>(error,HttpStatus.INTERNAL_SERVER_ERROR);
         }

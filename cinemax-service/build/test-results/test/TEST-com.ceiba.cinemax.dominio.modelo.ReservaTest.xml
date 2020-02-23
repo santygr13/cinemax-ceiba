@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.ceiba.cinemax.dominio.modelo.ReservaTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-02-23T15:56:45" hostname="SANTIAGO-GARCIA" time="0.001">
+<testsuite name="com.ceiba.cinemax.dominio.modelo.ReservaTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-02-23T16:38:09" hostname="SANTIAGO-GARCIA" time="0.003">
   <properties/>
-  <testcase name="CreacionReservaTest()" classname="com.ceiba.cinemax.dominio.modelo.ReservaTest" time="0.001"/>
+  <testcase name="CreacionReservaTest()" classname="com.ceiba.cinemax.dominio.modelo.ReservaTest" time="0.003"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

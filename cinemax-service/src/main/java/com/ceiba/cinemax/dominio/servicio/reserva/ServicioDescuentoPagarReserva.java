@@ -4,7 +4,7 @@ import org.springframework.stereotype.Service;
 import java.time.LocalDate;
 
 @Service
-public final class ServicioDescuentoPagarReserva {
+public  class ServicioDescuentoPagarReserva {
 
     private static final int VALOR_ENTRADA_POR_PUESTO= 7000;
     private static final int DIVISOR_OPERACION_PORCENTAJE=2;
@@ -16,11 +16,11 @@ public final class ServicioDescuentoPagarReserva {
     private static final int NUMERO_PORCENTAJE=100;
     private static final String NO_HAY_SERVICIO="Los dias lunes no hay servicio";
 
-    private ServicioDescuentoPagarReserva() {
+    public ServicioDescuentoPagarReserva() {
            //Permite adapatar datos a una salida especifica
     }
 
-        public static int valorReserva(int cantidadPuestos , LocalDate fechaReservaPelicula){
+        public  int valorReserva(int cantidadPuestos , LocalDate fechaReservaPelicula){
         int valorPagarReserva=0;
         if (fechaReservaPelicula.getDayOfWeek().getValue()==NUMERO_DIA_SEMANA_MARTES || fechaReservaPelicula.getDayOfWeek().getValue()==NUMERO_DIA_SEMANA_MIERCOLES){
             valorPagarReserva= ((cantidadPuestos*VALOR_ENTRADA_POR_PUESTO)/DIVISOR_OPERACION_PORCENTAJE);

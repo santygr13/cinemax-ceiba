@@ -4,16 +4,12 @@ package com.ceiba.cinemax.dominio.servicio.reserva;
 
 
 import com.ceiba.cinemax.dominio.excepcion.ExcepcionExistenciaPelicula;
-import com.ceiba.cinemax.dominio.modelo.Factura;
-import com.ceiba.cinemax.dominio.modelo.Pelicula;
 import com.ceiba.cinemax.dominio.modelo.Reserva;
 import com.ceiba.cinemax.dominio.puerto.repositorio.RepositorioPelicula;
 import com.ceiba.cinemax.dominio.puerto.repositorio.RepositorioReserva;
 import com.ceiba.cinemax.dominio.servicio.factura.ServicioCrearFactura;
-import com.ceiba.cinemax.dominio.servicio.pelicula.ServicioCrearPelicula;
 import com.ceiba.cinemax.dominio.servicio.salacine.ServicioCapacidadSalaCine;
 import com.ceiba.cinemax.testdatabuilder.dominio.modelo.FacturaTestDataBuilder;
-import com.ceiba.cinemax.testdatabuilder.dominio.modelo.PeliculaTestDataBuilder;
 import com.ceiba.cinemax.testdatabuilder.dominio.modelo.ReservaTestDataBuilder;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -36,6 +32,7 @@ public class SercioDescuentoPagarReservaTest {
     ServicioCrearFactura servicioCrearFactura;
     ServicioCapacidadSalaCine servicioCapacidadSalaCine;
     ServicioCrearReserva servicioCrearReserva;
+    ServicioDescuentoPagarReserva servicioDescuentoPagarReserva;
     @BeforeEach
     public void init(){
         repositorioPelicula=Mockito.mock(RepositorioPelicula.class);
@@ -43,15 +40,15 @@ public class SercioDescuentoPagarReservaTest {
         servicioCrearFactura=Mockito.mock(ServicioCrearFactura.class);
         servicioCapacidadSalaCine=Mockito.mock(ServicioCapacidadSalaCine.class);
         servicioCrearReserva= new ServicioCrearReserva(repositorioReserva,repositorioPelicula,servicioCapacidadSalaCine,servicioCrearFactura);
-
+        servicioDescuentoPagarReserva= new ServicioDescuentoPagarReserva();
     }
     
 
     @Test
     public void valorReservaDiaNormalTest(){
 
-        ServicioDescuentoPagarReserva.valorReserva(NUMERO_ENTRADAS,FECHA_RESERVA);
-        double valorObtenido=ServicioDescuentoPagarReserva.valorReserva(NUMERO_ENTRADAS,FECHA_RESERVA);
+        servicioDescuentoPagarReserva.valorReserva(NUMERO_ENTRADAS,FECHA_RESERVA);
+        double valorObtenido=servicioDescuentoPagarReserva.valorReserva(NUMERO_ENTRADAS,FECHA_RESERVA);
         double valorEsperado=49000;
         Assertions.assertEquals(valorEsperado,valorObtenido);
     }
@@ -59,16 +56,16 @@ public class SercioDescuentoPagarReservaTest {
 
     @Test
     public void valorReservaMartesMiercolestTest(){
-        ServicioDescuentoPagarReserva.valorReserva(NUMERO_ENTRADAS,FECHA_RESERVA_MARTES);
-        double valorObtenido=ServicioDescuentoPagarReserva.valorReserva(NUMERO_ENTRADAS,FECHA_RESERVA_MARTES);
+        servicioDescuentoPagarReserva.valorReserva(NUMERO_ENTRADAS,FECHA_RESERVA_MARTES);
+        double valorObtenido=servicioDescuentoPagarReserva.valorReserva(NUMERO_ENTRADAS,FECHA_RESERVA_MARTES);
         double valorEsperado=24500;
         Assertions.assertEquals(valorEsperado,valorObtenido);
     }
 
     @Test
     public void valorReservaDomingoTest(){
-        ServicioDescuentoPagarReserva.valorReserva(NUMERO_ENTRADAS,FECHA_RESERVA_DOMINGO);
-        double valorObtenido=ServicioDescuentoPagarReserva.valorReserva(NUMERO_ENTRADAS,FECHA_RESERVA_DOMINGO);
+        servicioDescuentoPagarReserva.valorReserva(NUMERO_ENTRADAS,FECHA_RESERVA_DOMINGO);
+        double valorObtenido=servicioDescuentoPagarReserva.valorReserva(NUMERO_ENTRADAS,FECHA_RESERVA_DOMINGO);
         double valorEsperado=98000;
         Assertions.assertEquals(valorEsperado,valorObtenido);
     }

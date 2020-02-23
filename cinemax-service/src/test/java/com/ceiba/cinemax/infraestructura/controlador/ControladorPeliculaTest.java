@@ -64,7 +64,19 @@ public class ControladorPeliculaTest {
                 .andExpect(status().isOk());
     }
 
+    @Test
+    void crearPeliculaSinSala() throws Exception{
 
+
+        ComandoPelicula comandoPelicula= new ComandoPeliculaTestDataBuilder().build();
+
+        mockMvc.perform(post("http://localhost:8080/pelicula")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(objectMapper.writeValueAsString(comandoPelicula))
+                .accept(MediaType.APPLICATION_JSON))
+                .andDo(print())
+                .andExpect(status().is4xxClientError());
+    }
 
 
     @Test

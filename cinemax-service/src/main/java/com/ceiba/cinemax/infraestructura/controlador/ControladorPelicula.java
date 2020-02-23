@@ -29,7 +29,6 @@ public class ControladorPelicula {
     @ResponseStatus(HttpStatus.OK)
     public void guardarPelicula(@RequestBody ComandoPelicula comandoPelicula){
         manejadorCrearPelicula.ejecutar(comandoPelicula);
-
     }
 
     @GetMapping
