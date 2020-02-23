@@ -9,9 +9,6 @@ public class SalaCineTestDataBuilder {
     private static final int CAPACIDAD_SILLAS=300;
     private static final boolean ESTADO_SALA_CINE= true;
 
-
-
-
     private String numeroSalaCine;
     private int capacidadSillas;
     private boolean estadoSalaCine;
@@ -21,6 +18,7 @@ public class SalaCineTestDataBuilder {
         this.numeroSalaCine=NUMERO_SALA_CINE;
         this.capacidadSillas=CAPACIDAD_SILLAS;
         this.estadoSalaCine=ESTADO_SALA_CINE;
+
     }
 
     public SalaCineTestDataBuilder conNumeroSalaCine(String numeroSala){
@@ -38,7 +36,7 @@ public class SalaCineTestDataBuilder {
         return  this;
     }
 
-    public SalaCine buil(){
+    public SalaCine build(){
         return  new SalaCine(this.numeroSalaCine,this.capacidadSillas,this.estadoSalaCine);
 
     }

@@ -14,7 +14,7 @@ public class SalaCineTest {
 
     @Test
     void funcionamientoGetterSalaCine(){
-        SalaCine salaCine= new SalaCineTestDataBuilder().buil();
+        SalaCine salaCine= new SalaCineTestDataBuilder().build();
 
         salaCine.setNumeroSalaCine(NUMERO_SALA_CINE);
         salaCine.setCapacidadSillas(CAPACIDAD_SILLAS);

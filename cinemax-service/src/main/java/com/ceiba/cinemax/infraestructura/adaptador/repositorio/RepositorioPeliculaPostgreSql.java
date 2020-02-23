@@ -43,6 +43,7 @@ public class RepositorioPeliculaPostgreSql implements RepositorioPelicula {
         PeliculaEntidad peliculaEntidad= modelMapper.map(pelicula,PeliculaEntidad.class);
         peliculaEntidad.setSalaCineEntidad(convertidorSalaCine.convertirSalaCineDominioAEntidad(pelicula.getSalaCine()));
         repositorioPeliculaJpa.save(peliculaEntidad);
+
     }
 
 

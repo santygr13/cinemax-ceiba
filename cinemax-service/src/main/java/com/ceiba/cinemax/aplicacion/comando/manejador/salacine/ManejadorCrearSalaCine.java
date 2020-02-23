@@ -21,4 +21,5 @@ public class ManejadorCrearSalaCine {
         SalaCine salaCine= this.fabricaSalaCine.crear(comandoSalaCine);
         this.servicioCrearSalaCine.ejecutar(salaCine);
     }
+
 }

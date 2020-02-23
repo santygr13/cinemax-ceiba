@@ -33,13 +33,13 @@ public class ServicioCrearReserva {
         }
     }
 
-
     public void ejecutar(Reserva reserva){
-        reserva.setFactura(servicioCrearFactura.construirFactura(reserva));
-        this.validarExistenciaPelicula(reserva.getNombrePelicula());
 
+        this.validarExistenciaPelicula(reserva.getNombrePelicula());
         servicioCapacidadSalaCine.reducirCapacidadSalaCine(reserva.getNombrePelicula(),reserva.getCantidadPuestos());
+        reserva.setFactura(servicioCrearFactura.construirFactura(reserva));
         this.repositorioReserva.guardar(reserva);
+
     }
 
 

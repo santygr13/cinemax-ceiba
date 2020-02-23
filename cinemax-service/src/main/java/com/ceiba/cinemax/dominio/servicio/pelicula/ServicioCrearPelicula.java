@@ -26,6 +26,7 @@ public class ServicioCrearPelicula {
         this.servicioEstadoSalaCine=servicioEstadoSalaCine;
     }
 
+
     public void validarExistenciaPelicula(Pelicula pelicula){
         boolean existe = this.repositorioPelicula.existe(pelicula);
         if (existe){

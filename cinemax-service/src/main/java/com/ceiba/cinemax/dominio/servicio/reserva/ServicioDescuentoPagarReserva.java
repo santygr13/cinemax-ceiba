@@ -20,7 +20,7 @@ public final class ServicioDescuentoPagarReserva {
            //Permite adapatar datos a una salida especifica
     }
 
-    public static int valorReserva(int cantidadPuestos , LocalDate fechaReservaPelicula){
+        public static int valorReserva(int cantidadPuestos , LocalDate fechaReservaPelicula){
         int valorPagarReserva=0;
         if (fechaReservaPelicula.getDayOfWeek().getValue()==NUMERO_DIA_SEMANA_MARTES || fechaReservaPelicula.getDayOfWeek().getValue()==NUMERO_DIA_SEMANA_MIERCOLES){
             valorPagarReserva= ((cantidadPuestos*VALOR_ENTRADA_POR_PUESTO)/DIVISOR_OPERACION_PORCENTAJE);

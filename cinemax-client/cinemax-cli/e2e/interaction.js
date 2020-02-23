@@ -5,22 +5,21 @@ describe('CineMaxApp interaction', function () {
     var pelicula = {
         nombre: 'perro',
         numeroSalaCine: '1'
-    },
+    };
 
     var reserva = {
         fechaReservaPelicula: '27/02/2020',
         cantidadPuestos: 20,
         documentoCliente: 103677644,
-        nombreCliente: santiago,
+        nombreCliente: 'santiago',
         nombrePelicula: 'perro'
-    },
+    };
 
     var salacine = {
         numeroSalaCine: '1',
         capacidadSillas: 200,
         estadoSalaCine: true
-    }
-
+    };
 
 
     it('Enlace, navegar pagina principal', function () {
@@ -30,11 +29,9 @@ describe('CineMaxApp interaction', function () {
     });
 
 
-
     it('Enlace, crear salacine', function () {
         browser.get('http://localhost:4200/#/principal');
         element(by.id('crear-salacine')).click();
-
         expect(browser.getCurrentUrl()).toBe('http://localhost:4200/#/salacine');
         browser.sleep(1000);
     });
@@ -44,13 +41,12 @@ describe('CineMaxApp interaction', function () {
         browser.get('http://localhost:4200/#/salacine');
         element(by.id('inputnumeroSalaCine')).sendKeys(salacine.numeroSalaCine);
         element(by.id('inputcapacidadsillas')).sendKeys(salacine.capacidadSillas);
-        element(by.id('listaOpciones')).sendKeys(salacine.estadoSalaCine);
-
+        element(by.id('listaOpciones')).$('[value="true"]').click();
         browser.sleep(1000);
         element(by.id('btnCrearSalaCine')).click();
-        element(by.buttonText('OK')).click();
-
+        element(by.buttonText('Crear')).click();
     });
+
 
     it('Volver del form de crear salaCine a la pag principal', function () {
         browser.get('http://localhost:4200/#/salacine');
@@ -71,14 +67,15 @@ describe('CineMaxApp interaction', function () {
     });
 
 
+
     it('Crear pelicula', function () {
         browser.get('http://localhost:4200/#/pelicula');
         element(by.id('inputnombre')).sendKeys(pelicula.nombre);
-        element(by.id('listaOpciones')).sendKeys(pelicula.numeroSalaCine);
+  //      element(by.id('listaOpciones')).$('[value="salaCine.numeroSalaCine"]').click();
 
         browser.sleep(1000);
         element(by.id('btnCrearPelicula')).click();
-        element(by.buttonText('OK')).click();
+        element(by.buttonText('Crear')).click();
 
     });
 
@@ -92,7 +89,7 @@ describe('CineMaxApp interaction', function () {
 
     });
 
-
+/*
     it('Enlace, crear reserva', function () {
         browser.get('http://localhost:4200/#/principal');
         element(by.id('crear-reserva')).click();
@@ -162,5 +159,5 @@ describe('CineMaxApp interaction', function () {
         browser.sleep(1000);
 
     });
-
+*/
 })

@@ -24,9 +24,11 @@ public class ServicioCrearSalaCine {
         }
     }
 
+
     public void ejecutar(SalaCine salaCine){
         this.validarExistencia(salaCine);
         this.repositorioSalaCine.guardar(salaCine);
+
 
     }
 

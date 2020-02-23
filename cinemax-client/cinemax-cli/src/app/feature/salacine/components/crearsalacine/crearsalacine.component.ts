@@ -23,6 +23,7 @@ export class CrearsalacineComponent implements OnInit {
     
   }
 
+  
   OnSubmit(form:NgForm){
     console.log(this.salacine)
     this.salaCineService.create(this.salacine)

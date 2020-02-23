@@ -10,16 +10,9 @@ import java.util.List;
 public interface RepositorioSalaCine {
 
     void guardar(SalaCine salaCine);
-
     void guardarEstado(SalaCine salaCine);
-
     SalaCine filtroCapacidadPorNombrePelicula(String nombrePelicula);
-
-
     SalaCine filtrarSalaCinePorNumeroSalaCinePeliculaEnPelicula(String numeroSalacinePelicula);
-
-
-
     boolean existe(SalaCine salaCine);
     boolean noExiste(String numeroSala);
     List<SalaCineDto> listar();
