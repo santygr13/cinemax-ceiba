@@ -6,7 +6,7 @@ import com.ceiba.cinemax.dominio.excepcion.ExcepcionCantidadPositiva;
 import com.ceiba.cinemax.dominio.excepcion.ExcepcionFechaInvalida;
 import java.time.LocalDate;
 
-public  class ValidadorArgumento {
+public final  class ValidadorArgumento {
 
 
     private ValidadorArgumento() {

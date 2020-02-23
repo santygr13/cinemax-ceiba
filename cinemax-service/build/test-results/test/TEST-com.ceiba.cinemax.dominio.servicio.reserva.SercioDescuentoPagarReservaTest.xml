@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.ceiba.cinemax.dominio.servicio.reserva.SercioDescuentoPagarReservaTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2020-02-23T16:38:09" hostname="SANTIAGO-GARCIA" time="0.122">
+<testsuite name="com.ceiba.cinemax.dominio.servicio.reserva.SercioDescuentoPagarReservaTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2020-02-23T20:09:07" hostname="SANTIAGO-GARCIA" time="0.087">
   <properties/>
-  <testcase name="ejecutarTest()" classname="com.ceiba.cinemax.dominio.servicio.reserva.SercioDescuentoPagarReservaTest" time="0.103"/>
-  <testcase name="validarNoExistenciaDePeliculaTest()" classname="com.ceiba.cinemax.dominio.servicio.reserva.SercioDescuentoPagarReservaTest" time="0.005"/>
-  <testcase name="valorReservaDiaNormalTest()" classname="com.ceiba.cinemax.dominio.servicio.reserva.SercioDescuentoPagarReservaTest" time="0.004"/>
-  <testcase name="valorReservaDomingoTest()" classname="com.ceiba.cinemax.dominio.servicio.reserva.SercioDescuentoPagarReservaTest" time="0.002"/>
+  <testcase name="ejecutarTest()" classname="com.ceiba.cinemax.dominio.servicio.reserva.SercioDescuentoPagarReservaTest" time="0.066"/>
+  <testcase name="validarNoExistenciaDePeliculaTest()" classname="com.ceiba.cinemax.dominio.servicio.reserva.SercioDescuentoPagarReservaTest" time="0.006"/>
+  <testcase name="valorReservaDiaNormalTest()" classname="com.ceiba.cinemax.dominio.servicio.reserva.SercioDescuentoPagarReservaTest" time="0.003"/>
+  <testcase name="valorReservaDomingoTest()" classname="com.ceiba.cinemax.dominio.servicio.reserva.SercioDescuentoPagarReservaTest" time="0.001"/>
   <testcase name="valorReservaMartesMiercolestTest()" classname="com.ceiba.cinemax.dominio.servicio.reserva.SercioDescuentoPagarReservaTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>

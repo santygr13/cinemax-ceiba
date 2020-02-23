@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.ceiba.cinemax.dominio.argumento.ValidadorArgumentoTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2020-02-23T16:38:07" hostname="SANTIAGO-GARCIA" time="0.148">
+<testsuite name="com.ceiba.cinemax.dominio.argumento.ValidadorArgumentoTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2020-02-23T20:09:06" hostname="SANTIAGO-GARCIA" time="0.107">
   <properties/>
-  <testcase name="validarFechaValidaTest()" classname="com.ceiba.cinemax.dominio.argumento.ValidadorArgumentoTest" time="0.13"/>
-  <testcase name="validarCampoObligatrioTest()" classname="com.ceiba.cinemax.dominio.argumento.ValidadorArgumentoTest" time="0.002"/>
+  <testcase name="validarFechaValidaTest()" classname="com.ceiba.cinemax.dominio.argumento.ValidadorArgumentoTest" time="0.099"/>
+  <testcase name="validarCampoObligatrioTest()" classname="com.ceiba.cinemax.dominio.argumento.ValidadorArgumentoTest" time="0.001"/>
   <testcase name="validarCampoVacioTest()" classname="com.ceiba.cinemax.dominio.argumento.ValidadorArgumentoTest" time="0.001"/>
-  <testcase name="validadorArgumentoCantidadPositivaTest()" classname="com.ceiba.cinemax.dominio.argumento.ValidadorArgumentoTest" time="0.001"/>
+  <testcase name="validadorArgumentoCantidadPositivaTest()" classname="com.ceiba.cinemax.dominio.argumento.ValidadorArgumentoTest" time="0.002"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

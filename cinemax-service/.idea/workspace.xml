@@ -2,25 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83ae6e60-66d8-4380-b018-020017de4091" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../cinemax-client/cinemax-cli/e2e/interaction.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cinemax-client/cinemax-cli/e2e/interaction.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/javaCompile/jarAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/ceiba/cinemax/dominio/servicio/factura/ServicioCrearFactura.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/ceiba/cinemax/dominio/servicio/factura/ServicioCrearFactura.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/ceiba/cinemax/dominio/servicio/reserva/ServicioDescuentoPagarReserva.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/ceiba/cinemax/dominio/servicio/reserva/ServicioDescuentoPagarReserva.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/ceiba/cinemax/dominio/validador/ValidadorArgumento.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/ceiba/cinemax/dominio/validador/ValidadorArgumento.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/ceiba/cinemax/infraestructura/controlador/ControladorPelicula.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/ceiba/cinemax/infraestructura/controlador/ControladorPelicula.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/ceiba/cinemax/infraestructura/error/ManejadorError.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/ceiba/cinemax/infraestructura/error/ManejadorError.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/ceiba/cinemax/dominio/servicio/reserva/SercioDescuentoPagarReservaTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/com/ceiba/cinemax/dominio/servicio/reserva/SercioDescuentoPagarReservaTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/ceiba/cinemax/infraestructura/controlador/ControladorPeliculaTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/com/ceiba/cinemax/infraestructura/controlador/ControladorPeliculaTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/jacoco/test.exec" beforeDir="false" afterPath="$PROJECT_DIR$/build/jacoco/test.exec" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/libs/cinemax-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/cinemax-0.0.1-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/com.ceiba.cinemax.dominio.argumento.ValidadorArgumentoTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/com.ceiba.cinemax.dominio.argumento.ValidadorArgumentoTest.html" afterDir="false" />
@@ -62,14 +50,7 @@
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ceiba/cinemax/dominio/servicio/reserva/ServicioDescuentoPagarReserva.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ceiba/cinemax/dominio/servicio/reserva/ServicioDescuentoPagarReserva.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ceiba/cinemax/dominio/servicio/salacine/ServicioCapacidadSalaCine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ceiba/cinemax/dominio/servicio/salacine/ServicioCapacidadSalaCine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ceiba/cinemax/dominio/validador/ValidadorArgumento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ceiba/cinemax/dominio/validador/ValidadorArgumento.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ceiba/cinemax/infraestructura/controlador/ControladorPelicula.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ceiba/cinemax/infraestructura/controlador/ControladorPelicula.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ceiba/cinemax/infraestructura/controlador/ControladorSalaCine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ceiba/cinemax/infraestructura/controlador/ControladorSalaCine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ceiba/cinemax/infraestructura/error/ManejadorError.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ceiba/cinemax/infraestructura/error/ManejadorError.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/ceiba/cinemax/dominio/servicio/reserva/SercioDescuentoPagarReservaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ceiba/cinemax/dominio/servicio/reserva/SercioDescuentoPagarReservaTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/ceiba/cinemax/infraestructura/controlador/ControladorPeliculaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ceiba/cinemax/infraestructura/controlador/ControladorPeliculaTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -368,30 +349,30 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="580" y="186" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1579995863080" />
-    <state width="1557" height="102" key="GridCell.Tab.0.bottom" timestamp="1582475869606">
+    <state width="1557" height="145" key="GridCell.Tab.0.bottom" timestamp="1582488594606">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state width="1557" height="30" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.0.1600.860@0.0.1600.860" timestamp="1582318239301" />
     <state width="1557" height="242" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.0.1600.860@1600.0.1600.860" timestamp="1582304419516" />
-    <state width="1557" height="102" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1582475869606" />
-    <state width="1557" height="102" key="GridCell.Tab.0.center" timestamp="1582475869605">
+    <state width="1557" height="145" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1582488594606" />
+    <state width="1557" height="145" key="GridCell.Tab.0.center" timestamp="1582488594606">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state width="1557" height="30" key="GridCell.Tab.0.center/0.0.1600.860/1600.0.1600.860@0.0.1600.860" timestamp="1582318239301" />
     <state width="1557" height="242" key="GridCell.Tab.0.center/0.0.1600.860/1600.0.1600.860@1600.0.1600.860" timestamp="1582304419516" />
-    <state width="1557" height="102" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1582475869605" />
-    <state width="1557" height="102" key="GridCell.Tab.0.left" timestamp="1582475869605">
+    <state width="1557" height="145" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1582488594606" />
+    <state width="1557" height="145" key="GridCell.Tab.0.left" timestamp="1582488594606">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state width="1557" height="30" key="GridCell.Tab.0.left/0.0.1600.860/1600.0.1600.860@0.0.1600.860" timestamp="1582318239301" />
     <state width="1557" height="242" key="GridCell.Tab.0.left/0.0.1600.860/1600.0.1600.860@1600.0.1600.860" timestamp="1582304419516" />
-    <state width="1557" height="102" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1582475869605" />
-    <state width="1557" height="102" key="GridCell.Tab.0.right" timestamp="1582475869606">
+    <state width="1557" height="145" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1582488594606" />
+    <state width="1557" height="145" key="GridCell.Tab.0.right" timestamp="1582488594606">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state width="1557" height="30" key="GridCell.Tab.0.right/0.0.1600.860/1600.0.1600.860@0.0.1600.860" timestamp="1582318239301" />
     <state width="1557" height="242" key="GridCell.Tab.0.right/0.0.1600.860/1600.0.1600.860@1600.0.1600.860" timestamp="1582304419516" />
-    <state width="1557" height="102" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1582475869606" />
+    <state width="1557" height="145" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1582488594606" />
     <state width="1557" height="563" key="GridCell.Tab.1.bottom" timestamp="1582473521134">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
