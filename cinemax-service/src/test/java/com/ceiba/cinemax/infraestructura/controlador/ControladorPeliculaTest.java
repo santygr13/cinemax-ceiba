@@ -55,6 +55,9 @@ public class ControladorPeliculaTest {
 
         ComandoPelicula comandoPelicula= new ComandoPeliculaTestDataBuilder().build();
         RepositorioSalaCinePostgreSql repositorioSalaCinePostgreSql = new RepositorioSalaCinePostgreSql(repositorioSalaCineJpa);
+        RepositorioPeliculaPostgreSql repositorioPeliculaPostgreSql= new RepositorioPeliculaPostgreSql(repositorioPeliculaJpa);
+        repositorioPeliculaPostgreSql.noExiste(comandoPelicula.getNombre());
+
         repositorioSalaCinePostgreSql.guardar(comandoPelicula.getSalaCine());
 
         mockMvc.perform(post("http://localhost:8080/pelicula")
@@ -113,7 +116,8 @@ public class ControladorPeliculaTest {
 
         mockMvc.perform(get("http://localhost:8080/pelicula")
                 .contentType(MediaType.APPLICATION_JSON)
-                .content(objectMapper.writeValueAsString(peliculas))).andDo(print()).andExpect(status().isOk())
+                .content(objectMapper.writeValueAsString(peliculas)))
+                .andDo(print()).andExpect(status().isOk())
 
                 .andExpect(jsonPath("[0].nombre").value("transformers"))
                 .andExpect(jsonPath("[0].salaCine.numeroSalaCine").value("1"))

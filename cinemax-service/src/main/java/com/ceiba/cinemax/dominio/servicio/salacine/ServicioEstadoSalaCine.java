@@ -26,7 +26,7 @@ public class ServicioEstadoSalaCine {
 
         if(salaCine.isEstadoSalaCine()){
             salaCine.setEstadoSalaCine(false);
-        }else if (!salaCine.isEstadoSalaCine()){
+        }else{
             throw new ExcepcionEstadoSalaCine(SALA_CINE_OCUPADA);
         }
         this.repositorioSalaCine.guardarEstado(salaCine);
