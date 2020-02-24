@@ -6,8 +6,10 @@ import com.ceiba.cinemax.dominio.modelo.Pelicula;
 import com.ceiba.cinemax.dominio.modelo.Reserva;
 import com.ceiba.cinemax.dominio.modelo.SalaCine;
 import com.ceiba.cinemax.infraestructura.adaptador.repositorio.RepositorioPeliculaPostgreSql;
+import com.ceiba.cinemax.infraestructura.adaptador.repositorio.RepositorioReservaPostgreSql;
 import com.ceiba.cinemax.infraestructura.adaptador.repositorio.RepositorioSalaCinePostgreSql;
 import com.ceiba.cinemax.infraestructura.repositoriojpa.RepositorioPeliculaJpa;
+import com.ceiba.cinemax.infraestructura.repositoriojpa.RepositorioReservaJpa;
 import com.ceiba.cinemax.infraestructura.repositoriojpa.RepositorioSalaCineJpa;
 import com.ceiba.cinemax.testdatabuilder.aplicacion.ComandoReservaTestDataBuilder;
 import com.ceiba.cinemax.testdatabuilder.dominio.modelo.FacturaTestDataBuilder;
@@ -48,6 +50,9 @@ public class ControladorReservaTest {
     private RepositorioSalaCineJpa repositorioSalaCineJpa;
 
     @Autowired
+    private RepositorioReservaJpa repositorioReservaJpa;
+
+    @Autowired
     private MockMvc mockMvc;
 
     @Test
@@ -59,7 +64,7 @@ public class ControladorReservaTest {
         RepositorioSalaCinePostgreSql repositorioSalaCinePostgreSql = new RepositorioSalaCinePostgreSql(repositorioSalaCineJpa);
         repositorioSalaCinePostgreSql.guardar(salaCine);
 
-        Pelicula pelicula = new Pelicula( "Transformers",salaCine, "1");
+        Pelicula pelicula = new Pelicula("Transformers", salaCine, "1");
         RepositorioPeliculaPostgreSql repositorioPeliculaPostgreSql = new RepositorioPeliculaPostgreSql(repositorioPeliculaJpa);
         repositorioPeliculaPostgreSql.guardar(pelicula);
 
@@ -72,11 +77,39 @@ public class ControladorReservaTest {
     }
 
 
+    @Test
+    public void listarReservaTest() throws Exception {
+
+        RepositorioPeliculaPostgreSql repositorioPeliculaPostgreSql = new RepositorioPeliculaPostgreSql(repositorioPeliculaJpa);
+        RepositorioSalaCinePostgreSql repositorioSalaCinePostgreSql = new RepositorioSalaCinePostgreSql(repositorioSalaCineJpa);
+        RepositorioReservaPostgreSql repositorioReservaPostgreSql= new RepositorioReservaPostgreSql(repositorioReservaJpa);
+
+
+        SalaCine salaCine1 = new SalaCine("1", 200, true);
+        repositorioSalaCinePostgreSql.guardar(salaCine1);
+
+        Pelicula primeraPelicula = new Pelicula("transformers", salaCine1, salaCine1.getNumeroSalaCine());
+        repositorioPeliculaPostgreSql.guardar(primeraPelicula);
+
+//        Factura factura=new Factura(LocalDate.of(2020,02,27),21000);
+        Reserva reserva = new Reserva(1L, LocalDate.of(2020, 02, 27), 1037854939, "Santiago", 3, primeraPelicula.getNombre(), new FacturaTestDataBuilder().build());
+        repositorioReservaPostgreSql.guardar(reserva);
 
 
 
+        mockMvc.perform(get("http://localhost:8080/reserva")
+                .contentType(MediaType.APPLICATION_JSON)
+                ).andDo(print()).andExpect(status().isOk())
+
+               // .andExpect(jsonPath("[0].idReserva").value(1))
+                .andExpect(jsonPath("[0].fechaReservaPelicula").value(LocalDate.of(2020, 02, 27).toString()))
+                .andExpect(jsonPath("[0].documentoCliente").value(1037854939))
+                .andExpect(jsonPath("[0].nombreCliente").value("Santiago"))
+                .andExpect(jsonPath("[0].cantidadPuestos").value(3))
+                .andExpect(jsonPath("[0].nombrePelicula").value("transformers"));
+//                .andExpect(jsonPath("[0].factura.fechaReserva").value(LocalDate.of(2020,02,27)))
+//                .andExpect(jsonPath("[0].factura.valor").value(21000));
 
 
-
-
+    }
 }

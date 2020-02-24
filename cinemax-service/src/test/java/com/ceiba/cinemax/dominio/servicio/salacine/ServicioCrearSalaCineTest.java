@@ -2,7 +2,6 @@ package com.ceiba.cinemax.dominio.servicio.salacine;
 
 import com.ceiba.cinemax.dominio.excepcion.ExcepcionDuplicidad;
 import com.ceiba.cinemax.dominio.excepcion.ExcepcionEstadoSalaCine;
-import com.ceiba.cinemax.dominio.excepcion.ExcepcionExistenciaPelicula;
 import com.ceiba.cinemax.dominio.modelo.SalaCine;
 import com.ceiba.cinemax.dominio.puerto.repositorio.RepositorioSalaCine;
 import com.ceiba.cinemax.testdatabuilder.dominio.modelo.SalaCineTestDataBuilder;
