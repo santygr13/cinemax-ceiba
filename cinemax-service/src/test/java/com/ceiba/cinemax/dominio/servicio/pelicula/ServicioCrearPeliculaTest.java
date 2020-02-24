@@ -4,11 +4,16 @@ import com.ceiba.cinemax.dominio.excepcion.ExcepcionDuplicidad;
 import com.ceiba.cinemax.dominio.excepcion.ExcepcionExistenciaPelicula;
 import com.ceiba.cinemax.dominio.excepcion.ExcepcionExistenciaSalaCine;
 import com.ceiba.cinemax.dominio.modelo.Pelicula;
+import com.ceiba.cinemax.dominio.modelo.Reserva;
 import com.ceiba.cinemax.dominio.modelo.SalaCine;
 import com.ceiba.cinemax.dominio.puerto.repositorio.RepositorioPelicula;
 import com.ceiba.cinemax.dominio.puerto.repositorio.RepositorioSalaCine;
+import com.ceiba.cinemax.dominio.servicio.salacine.ServicioCapacidadSalaCine;
 import com.ceiba.cinemax.dominio.servicio.salacine.ServicioEstadoSalaCine;
+import com.ceiba.cinemax.infraestructura.convertidor.reserva.salacine.ConvertidorSalaCine;
+import com.ceiba.cinemax.infraestructura.entidad.SalaCineEntidad;
 import com.ceiba.cinemax.testdatabuilder.dominio.modelo.PeliculaTestDataBuilder;
+import com.ceiba.cinemax.testdatabuilder.dominio.modelo.ReservaTestDataBuilder;
 import com.ceiba.cinemax.testdatabuilder.dominio.modelo.SalaCineTestDataBuilder;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -25,28 +30,26 @@ public class ServicioCrearPeliculaTest {
     RepositorioSalaCine repositorioSalaCine;
     ServicioEstadoSalaCine servicioEstadoSalaCine;
     RepositorioPelicula repositorioPelicula;
-
+    ServicioCapacidadSalaCine servicioCapacidadSalaCine;
     @BeforeEach
     public void init(){
         repositorioSalaCine= Mockito.mock(RepositorioSalaCine.class);
         repositorioPelicula= Mockito.mock(RepositorioPelicula.class);
         servicioEstadoSalaCine=Mockito.mock(ServicioEstadoSalaCine.class);
         servicioCrearPelicula= new ServicioCrearPelicula(repositorioPelicula,repositorioSalaCine,servicioEstadoSalaCine);
-
+        servicioCapacidadSalaCine= new ServicioCapacidadSalaCine(repositorioPelicula,repositorioSalaCine);
     }
 
     @Test
     public void validarExistenciaDePeliculaTest(){
         try {
-            Pelicula pelicula= new PeliculaTestDataBuilder().conNombre("Anabelle").build();
+            Pelicula pelicula= new PeliculaTestDataBuilder().build();
             Mockito.when(repositorioPelicula.existe(Mockito.any())).thenReturn(true);
             servicioCrearPelicula.ejecutar(pelicula);
             Assertions.fail();
         }catch (ExcepcionDuplicidad e){
             Assertions.assertEquals(LA_PELICULA_YA_EXISTE,e.getMessage());
-
         }
-
     }
 
     @Test
@@ -62,6 +65,16 @@ public class ServicioCrearPeliculaTest {
         }
     }
 
+
+    @Test
+    public void capacidadSalaCineTest(){
+        SalaCine salaCine= new SalaCineTestDataBuilder().build();
+        Mockito.when(repositorioSalaCine.filtroCapacidadPorNombrePelicula(Mockito.anyString())).thenReturn(salaCine);
+        ConvertidorSalaCine convertidorSalaCine=Mockito.mock(ConvertidorSalaCine.class);
+        SalaCineEntidad salaCineEntidad= Mockito.mock(SalaCineEntidad.class);
+        Mockito.when(convertidorSalaCine.convertirSalaCineDominioAEntidad(salaCine)).thenReturn(salaCineEntidad);
+
+    }
 
 
     @Test

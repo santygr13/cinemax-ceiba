@@ -8,6 +8,7 @@ import com.ceiba.cinemax.infraestructura.adaptador.repositorio.RepositorioSalaCi
 import com.ceiba.cinemax.infraestructura.repositoriojpa.RepositorioPeliculaJpa;
 import com.ceiba.cinemax.infraestructura.repositoriojpa.RepositorioSalaCineJpa;
 import com.ceiba.cinemax.testdatabuilder.aplicacion.ComandoPeliculaTestDataBuilder;
+import com.ceiba.cinemax.testdatabuilder.dominio.modelo.PeliculaTestDataBuilder;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -77,6 +78,21 @@ public class ControladorPeliculaTest {
                 .andDo(print())
                 .andExpect(status().is4xxClientError());
     }
+
+    @Test
+    public void crearPeliculaYaExistente() throws Exception{
+        Pelicula pelicula = new PeliculaTestDataBuilder().build();
+        RepositorioPeliculaPostgreSql repositorioPeliculaPostgreSql= new RepositorioPeliculaPostgreSql(repositorioPeliculaJpa);
+        repositorioPeliculaPostgreSql.existe(pelicula);
+
+        mockMvc.perform(post("http://localhost:8080/pelicula")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(objectMapper.writeValueAsString(pelicula))
+                .accept(MediaType.APPLICATION_JSON))
+                .andDo(print())
+                .andExpect(status().is4xxClientError());
+    }
+
 
 
     @Test

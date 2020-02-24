@@ -23,7 +23,6 @@ public class EntidadPeliculaTest {
         peliculaEntidad.setSalaCineEntidad(SALA_CINE);
         peliculaEntidad.setNumeroSalaCine(NUMERO_SALA_CINE);
 
-
         Assertions.assertEquals(peliculaEntidad.getNombre(),NOMBRE_PELICULA);
         Assertions.assertEquals(peliculaEntidad.getSalaCineEntidad(),SALA_CINE);
         Assertions.assertEquals(peliculaEntidad.getNumeroSalaCine(),NUMERO_SALA_CINE);

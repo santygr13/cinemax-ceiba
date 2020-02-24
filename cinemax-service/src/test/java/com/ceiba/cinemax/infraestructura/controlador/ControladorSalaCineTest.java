@@ -52,6 +52,8 @@ public class ControladorSalaCineTest {
                 .andExpect(status().isOk());
     }
 
+
+
     @Test
     public void listarSalaCineList()throws Exception{
         RepositorioSalaCinePostgreSql repositorioSalaCinePostgreSql = new RepositorioSalaCinePostgreSql(repositorioSalaCineJpa);
@@ -70,7 +72,6 @@ public class ControladorSalaCineTest {
                 .andExpect(jsonPath("[0].numeroSalaCine").value("123453"))
                 .andExpect(jsonPath("[0].capacidadSillas").value(200))
                 .andExpect(jsonPath("[0].estadoSalaCine").value(true));
-
     }
 
 

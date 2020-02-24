@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.ceiba.cinemax.dominio.servicio.pelicula.ServicioCrearPeliculaTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-02-23T20:09:07" hostname="SANTIAGO-GARCIA" time="0.235">
+<testsuite name="com.ceiba.cinemax.dominio.servicio.pelicula.ServicioCrearPeliculaTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2020-02-24T15:46:43" hostname="SANTIAGO-GARCIA" time="0.372">
   <properties/>
-  <testcase name="ejecutarTest()" classname="com.ceiba.cinemax.dominio.servicio.pelicula.ServicioCrearPeliculaTest" time="0.226"/>
-  <testcase name="validarNoExistenciaSalaCineTest()" classname="com.ceiba.cinemax.dominio.servicio.pelicula.ServicioCrearPeliculaTest" time="0.002"/>
+  <testcase name="ejecutarTest()" classname="com.ceiba.cinemax.dominio.servicio.pelicula.ServicioCrearPeliculaTest" time="0.249"/>
+  <testcase name="validarNoExistenciaSalaCineTest()" classname="com.ceiba.cinemax.dominio.servicio.pelicula.ServicioCrearPeliculaTest" time="0.004"/>
   <testcase name="validarExistenciaDePeliculaTest()" classname="com.ceiba.cinemax.dominio.servicio.pelicula.ServicioCrearPeliculaTest" time="0.003"/>
+  <testcase name="capacidadSalaCineTest()" classname="com.ceiba.cinemax.dominio.servicio.pelicula.ServicioCrearPeliculaTest" time="0.11"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

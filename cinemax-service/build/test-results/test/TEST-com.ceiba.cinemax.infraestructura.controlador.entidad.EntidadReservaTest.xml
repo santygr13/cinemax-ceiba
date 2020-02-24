@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.ceiba.cinemax.infraestructura.controlador.entidad.EntidadReservaTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-02-23T20:09:20" hostname="SANTIAGO-GARCIA" time="0.001">
+<testsuite name="com.ceiba.cinemax.infraestructura.controlador.entidad.EntidadReservaTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-02-24T15:47:02" hostname="SANTIAGO-GARCIA" time="0.003">
   <properties/>
-  <testcase name="funcionamientoGetReservaEntidadTest()" classname="com.ceiba.cinemax.infraestructura.controlador.entidad.EntidadReservaTest" time="0.001"/>
+  <testcase name="funcionamientoGetReservaEntidadTest()" classname="com.ceiba.cinemax.infraestructura.controlador.entidad.EntidadReservaTest" time="0.003"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -50,7 +50,12 @@
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ceiba/cinemax/dominio/validador/ValidadorArgumento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ceiba/cinemax/dominio/validador/ValidadorArgumento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/ceiba/cinemax/dominio/servicio/pelicula/ServicioCrearPeliculaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ceiba/cinemax/dominio/servicio/pelicula/ServicioCrearPeliculaTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/ceiba/cinemax/dominio/servicio/salacine/ServicioCrearSalaCineTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ceiba/cinemax/dominio/servicio/salacine/ServicioCrearSalaCineTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/ceiba/cinemax/infraestructura/controlador/ControladorPeliculaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ceiba/cinemax/infraestructura/controlador/ControladorPeliculaTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/ceiba/cinemax/infraestructura/controlador/ControladorReservaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ceiba/cinemax/infraestructura/controlador/ControladorReservaTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/ceiba/cinemax/infraestructura/controlador/ControladorSalaCineTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ceiba/cinemax/infraestructura/controlador/ControladorSalaCineTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/ceiba/cinemax/infraestructura/controlador/entidad/EntidadPeliculaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ceiba/cinemax/infraestructura/controlador/entidad/EntidadPeliculaTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,12 +142,12 @@
     </key>
   </component>
   <component name="RunManager" selected="Gradle.run">
-    <configuration name="ControladorPeliculaTest.crearPeliculaSinSala" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ControladorPeliculaTest.crearPeliculaNoExistente" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.ceiba.cinemax.infraestructura.controlador.ControladorPeliculaTest.crearPeliculaSinSala&quot;" />
+        <option name="scriptParameters" value="--tests &quot;com.ceiba.cinemax.infraestructura.controlador.ControladorPeliculaTest.crearPeliculaNoExistente&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -157,12 +162,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="SercioDescuentoPagarReservaTest.ejecutarTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ControladorPeliculaTest.crearPeliculaYaExistente" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.ceiba.cinemax.dominio.servicio.reserva.SercioDescuentoPagarReservaTest.ejecutarTest&quot;" />
+        <option name="scriptParameters" value="--tests &quot;com.ceiba.cinemax.infraestructura.controlador.ControladorPeliculaTest.crearPeliculaYaExistente&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -177,12 +182,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="SercioDescuentoPagarReservaTest.validarNoExistenciaDePeliculaTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ControladorReservaTest.crearReserva" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.ceiba.cinemax.dominio.servicio.reserva.SercioDescuentoPagarReservaTest.validarNoExistenciaDePeliculaTest&quot;" />
+        <option name="scriptParameters" value="--tests &quot;com.ceiba.cinemax.infraestructura.controlador.ControladorReservaTest.crearReserva&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -197,12 +202,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="ServicioCrearPeliculaTest.ejecutarTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ControladorReservaTest.listarReservaTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.ceiba.cinemax.dominio.servicio.pelicula.ServicioCrearPeliculaTest.ejecutarTest&quot;" />
+        <option name="scriptParameters" value="--tests &quot;com.ceiba.cinemax.infraestructura.controlador.ControladorReservaTest.listarReservaTest&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -217,12 +222,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="ServicioCrearSalaCineTest.validarExistenciaDeSalaCineTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ServicioCrearSalaCineTest.cambiarEstadoSalaCineTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.ceiba.cinemax.dominio.servicio.salacine.ServicioCrearSalaCineTest.validarExistenciaDeSalaCineTest&quot;" />
+        <option name="scriptParameters" value="--tests &quot;com.ceiba.cinemax.dominio.servicio.salacine.ServicioCrearSalaCineTest.cambiarEstadoSalaCineTest&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -260,19 +265,19 @@
     </configuration>
     <list>
       <item itemvalue="Gradle.run" />
-      <item itemvalue="Gradle.ServicioCrearSalaCineTest.validarExistenciaDeSalaCineTest" />
-      <item itemvalue="Gradle.ServicioCrearPeliculaTest.ejecutarTest" />
-      <item itemvalue="Gradle.SercioDescuentoPagarReservaTest.validarNoExistenciaDePeliculaTest" />
-      <item itemvalue="Gradle.SercioDescuentoPagarReservaTest.ejecutarTest" />
-      <item itemvalue="Gradle.ControladorPeliculaTest.crearPeliculaSinSala" />
+      <item itemvalue="Gradle.ServicioCrearSalaCineTest.cambiarEstadoSalaCineTest" />
+      <item itemvalue="Gradle.ControladorPeliculaTest.crearPeliculaYaExistente" />
+      <item itemvalue="Gradle.ControladorPeliculaTest.crearPeliculaNoExistente" />
+      <item itemvalue="Gradle.ControladorReservaTest.listarReservaTest" />
+      <item itemvalue="Gradle.ControladorReservaTest.crearReserva" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.ControladorPeliculaTest.crearPeliculaSinSala" />
-        <item itemvalue="Gradle.SercioDescuentoPagarReservaTest.ejecutarTest" />
-        <item itemvalue="Gradle.SercioDescuentoPagarReservaTest.validarNoExistenciaDePeliculaTest" />
-        <item itemvalue="Gradle.ServicioCrearSalaCineTest.validarExistenciaDeSalaCineTest" />
-        <item itemvalue="Gradle.ServicioCrearPeliculaTest.ejecutarTest" />
+        <item itemvalue="Gradle.ControladorReservaTest.listarReservaTest" />
+        <item itemvalue="Gradle.ControladorReservaTest.crearReserva" />
+        <item itemvalue="Gradle.ControladorPeliculaTest.crearPeliculaYaExistente" />
+        <item itemvalue="Gradle.ControladorPeliculaTest.crearPeliculaNoExistente" />
+        <item itemvalue="Gradle.ServicioCrearSalaCineTest.cambiarEstadoSalaCineTest" />
       </list>
     </recent_temporary>
   </component>
@@ -349,53 +354,53 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="580" y="186" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1579995863080" />
-    <state width="1557" height="145" key="GridCell.Tab.0.bottom" timestamp="1582488594606">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state width="1557" height="92" key="GridCell.Tab.0.bottom" timestamp="1582559183503">
+      <screen x="1600" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="30" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.0.1600.860@0.0.1600.860" timestamp="1582318239301" />
-    <state width="1557" height="242" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.0.1600.860@1600.0.1600.860" timestamp="1582304419516" />
+    <state width="1557" height="253" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.0.1600.860@0.0.1600.860" timestamp="1582546065050" />
+    <state width="1557" height="92" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.0.1600.860@1600.0.1600.860" timestamp="1582559183503" />
     <state width="1557" height="145" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1582488594606" />
-    <state width="1557" height="145" key="GridCell.Tab.0.center" timestamp="1582488594606">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state width="1557" height="92" key="GridCell.Tab.0.center" timestamp="1582559183503">
+      <screen x="1600" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="30" key="GridCell.Tab.0.center/0.0.1600.860/1600.0.1600.860@0.0.1600.860" timestamp="1582318239301" />
-    <state width="1557" height="242" key="GridCell.Tab.0.center/0.0.1600.860/1600.0.1600.860@1600.0.1600.860" timestamp="1582304419516" />
+    <state width="1557" height="253" key="GridCell.Tab.0.center/0.0.1600.860/1600.0.1600.860@0.0.1600.860" timestamp="1582546065050" />
+    <state width="1557" height="92" key="GridCell.Tab.0.center/0.0.1600.860/1600.0.1600.860@1600.0.1600.860" timestamp="1582559183503" />
     <state width="1557" height="145" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1582488594606" />
-    <state width="1557" height="145" key="GridCell.Tab.0.left" timestamp="1582488594606">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state width="1557" height="92" key="GridCell.Tab.0.left" timestamp="1582559183503">
+      <screen x="1600" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="30" key="GridCell.Tab.0.left/0.0.1600.860/1600.0.1600.860@0.0.1600.860" timestamp="1582318239301" />
-    <state width="1557" height="242" key="GridCell.Tab.0.left/0.0.1600.860/1600.0.1600.860@1600.0.1600.860" timestamp="1582304419516" />
+    <state width="1557" height="253" key="GridCell.Tab.0.left/0.0.1600.860/1600.0.1600.860@0.0.1600.860" timestamp="1582546065050" />
+    <state width="1557" height="92" key="GridCell.Tab.0.left/0.0.1600.860/1600.0.1600.860@1600.0.1600.860" timestamp="1582559183503" />
     <state width="1557" height="145" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1582488594606" />
-    <state width="1557" height="145" key="GridCell.Tab.0.right" timestamp="1582488594606">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state width="1557" height="92" key="GridCell.Tab.0.right" timestamp="1582559183503">
+      <screen x="1600" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="30" key="GridCell.Tab.0.right/0.0.1600.860/1600.0.1600.860@0.0.1600.860" timestamp="1582318239301" />
-    <state width="1557" height="242" key="GridCell.Tab.0.right/0.0.1600.860/1600.0.1600.860@1600.0.1600.860" timestamp="1582304419516" />
+    <state width="1557" height="253" key="GridCell.Tab.0.right/0.0.1600.860/1600.0.1600.860@0.0.1600.860" timestamp="1582546065050" />
+    <state width="1557" height="92" key="GridCell.Tab.0.right/0.0.1600.860/1600.0.1600.860@1600.0.1600.860" timestamp="1582559183503" />
     <state width="1557" height="145" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1582488594606" />
-    <state width="1557" height="563" key="GridCell.Tab.1.bottom" timestamp="1582473521134">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state width="1557" height="303" key="GridCell.Tab.1.bottom" timestamp="1582558617079">
+      <screen x="1600" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="376" key="GridCell.Tab.1.bottom/0.0.1600.860/1600.0.1600.860@0.0.1600.860" timestamp="1581453554305" />
-    <state width="1557" height="242" key="GridCell.Tab.1.bottom/0.0.1600.860/1600.0.1600.860@1600.0.1600.860" timestamp="1582304419516" />
+    <state width="1557" height="253" key="GridCell.Tab.1.bottom/0.0.1600.860/1600.0.1600.860@0.0.1600.860" timestamp="1582546065050" />
+    <state width="1557" height="303" key="GridCell.Tab.1.bottom/0.0.1600.860/1600.0.1600.860@1600.0.1600.860" timestamp="1582558617079" />
     <state width="1557" height="563" key="GridCell.Tab.1.bottom/0.0.1600.860@0.0.1600.860" timestamp="1582473521134" />
-    <state width="1557" height="563" key="GridCell.Tab.1.center" timestamp="1582473521134">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state width="1557" height="303" key="GridCell.Tab.1.center" timestamp="1582558617079">
+      <screen x="1600" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="376" key="GridCell.Tab.1.center/0.0.1600.860/1600.0.1600.860@0.0.1600.860" timestamp="1581453554305" />
-    <state width="1557" height="242" key="GridCell.Tab.1.center/0.0.1600.860/1600.0.1600.860@1600.0.1600.860" timestamp="1582304419516" />
+    <state width="1557" height="253" key="GridCell.Tab.1.center/0.0.1600.860/1600.0.1600.860@0.0.1600.860" timestamp="1582546065050" />
+    <state width="1557" height="303" key="GridCell.Tab.1.center/0.0.1600.860/1600.0.1600.860@1600.0.1600.860" timestamp="1582558617079" />
     <state width="1557" height="563" key="GridCell.Tab.1.center/0.0.1600.860@0.0.1600.860" timestamp="1582473521134" />
-    <state width="1557" height="563" key="GridCell.Tab.1.left" timestamp="1582473521134">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state width="1557" height="303" key="GridCell.Tab.1.left" timestamp="1582558617079">
+      <screen x="1600" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="376" key="GridCell.Tab.1.left/0.0.1600.860/1600.0.1600.860@0.0.1600.860" timestamp="1581453554305" />
-    <state width="1557" height="242" key="GridCell.Tab.1.left/0.0.1600.860/1600.0.1600.860@1600.0.1600.860" timestamp="1582304419516" />
+    <state width="1557" height="253" key="GridCell.Tab.1.left/0.0.1600.860/1600.0.1600.860@0.0.1600.860" timestamp="1582546065050" />
+    <state width="1557" height="303" key="GridCell.Tab.1.left/0.0.1600.860/1600.0.1600.860@1600.0.1600.860" timestamp="1582558617079" />
     <state width="1557" height="563" key="GridCell.Tab.1.left/0.0.1600.860@0.0.1600.860" timestamp="1582473521134" />
-    <state width="1557" height="563" key="GridCell.Tab.1.right" timestamp="1582473521134">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state width="1557" height="303" key="GridCell.Tab.1.right" timestamp="1582558617079">
+      <screen x="1600" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="376" key="GridCell.Tab.1.right/0.0.1600.860/1600.0.1600.860@0.0.1600.860" timestamp="1581453554305" />
-    <state width="1557" height="242" key="GridCell.Tab.1.right/0.0.1600.860/1600.0.1600.860@1600.0.1600.860" timestamp="1582304419516" />
+    <state width="1557" height="253" key="GridCell.Tab.1.right/0.0.1600.860/1600.0.1600.860@0.0.1600.860" timestamp="1582546065050" />
+    <state width="1557" height="303" key="GridCell.Tab.1.right/0.0.1600.860/1600.0.1600.860@1600.0.1600.860" timestamp="1582558617079" />
     <state width="1557" height="563" key="GridCell.Tab.1.right/0.0.1600.860@0.0.1600.860" timestamp="1582473521134" />
     <state x="280" y="1" key="SettingsEditor" timestamp="1581947123670">
       <screen x="0" y="0" width="1600" height="860" />
@@ -420,10 +425,10 @@
     </state>
     <state x="1938" y="167" width="1096" height="602" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1600.860/1600.0.1600.860@1600.0.1600.860" timestamp="1580840577600" />
     <state x="338" y="167" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1600.860@0.0.1600.860" timestamp="1580669478793" />
-    <state x="2069" y="28" width="661" height="804" key="find.popup" timestamp="1581018445778">
+    <state x="2069" y="28" width="661" height="804" key="find.popup" timestamp="1582550534430">
       <screen x="1600" y="0" width="1600" height="860" />
     </state>
-    <state x="2069" y="28" width="661" height="804" key="find.popup/0.0.1600.860/1600.0.1600.860@1600.0.1600.860" timestamp="1581018445778" />
+    <state x="2069" y="28" width="661" height="804" key="find.popup/0.0.1600.860/1600.0.1600.860@1600.0.1600.860" timestamp="1582550534430" />
     <state x="2068" y="194" key="run.anything.popup" timestamp="1580303333257">
       <screen x="1600" y="0" width="1600" height="860" />
     </state>

@@ -1,13 +1,16 @@
 package com.ceiba.cinemax.infraestructura.controlador;
 import com.ceiba.cinemax.CinemaxApplication;
 import com.ceiba.cinemax.aplicacion.comando.ComandoReserva;
+import com.ceiba.cinemax.dominio.modelo.Factura;
 import com.ceiba.cinemax.dominio.modelo.Pelicula;
+import com.ceiba.cinemax.dominio.modelo.Reserva;
 import com.ceiba.cinemax.dominio.modelo.SalaCine;
 import com.ceiba.cinemax.infraestructura.adaptador.repositorio.RepositorioPeliculaPostgreSql;
 import com.ceiba.cinemax.infraestructura.adaptador.repositorio.RepositorioSalaCinePostgreSql;
 import com.ceiba.cinemax.infraestructura.repositoriojpa.RepositorioPeliculaJpa;
 import com.ceiba.cinemax.infraestructura.repositoriojpa.RepositorioSalaCineJpa;
 import com.ceiba.cinemax.testdatabuilder.aplicacion.ComandoReservaTestDataBuilder;
+import com.ceiba.cinemax.testdatabuilder.dominio.modelo.FacturaTestDataBuilder;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,8 +20,13 @@ import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.web.context.WebApplicationContext;
 import javax.transaction.Transactional;
+import java.time.LocalDate;
+import java.util.ArrayList;
+
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 
@@ -62,6 +70,7 @@ public class ControladorReservaTest {
                 .andDo(print())
                 .andExpect(status().isOk());
     }
+
 
 
 
