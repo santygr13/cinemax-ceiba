@@ -69,9 +69,18 @@ describe('CineMaxApp interaction', function () {
 
 
     it('Crear pelicula', function () {
+
+        browser.get('http://localhost:4200/#/salacine');
+        element(by.id('inputnumeroSalaCine')).sendKeys(salacine.numeroSalaCine);
+        element(by.id('inputcapacidadsillas')).sendKeys(salacine.capacidadSillas);
+        element(by.id('listaOpciones')).$('[value="true"]').click();
+        browser.sleep(1000);
+        element(by.id('btnCrearSalaCine')).click();
+        element(by.buttonText('Crear')).click();
+
         browser.get('http://localhost:4200/#/pelicula');
         element(by.id('inputnombre')).sendKeys(pelicula.nombre);
-        element(by.id('listaOpciones')).$('[value="1000"]').click();
+        element(by.id('listaOpciones')).$('[value="1"]').click();
         browser.sleep(1000000);
         element(by.id('btnCrearPelicula')).click();
         element(by.buttonText('Crear')).click();

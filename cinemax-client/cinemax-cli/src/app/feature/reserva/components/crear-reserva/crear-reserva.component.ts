@@ -29,10 +29,12 @@ export class CrearReservaComponent implements OnInit {
     this.getpeliculas();
   }
 
-  getpeliculas() {
-    this.servicioPelicula.getPeliculas().subscribe((data: any) => this.pelicula = data)
-    console.log(this.pelicula)
 
+  getpeliculas() {
+    this.servicioPelicula.getPeliculas().subscribe((data: any) => {
+      this.pelicula = data;
+      console.log(this.pelicula)
+    });
   }
 
   

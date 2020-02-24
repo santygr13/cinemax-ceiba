@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.ceiba.cinemax.dominio.servicio.salacine.ServicioCrearSalaCineTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-02-24T16:50:18" hostname="SANTIAGO-GARCIA" time="0.01">
+<testsuite name="com.ceiba.cinemax.dominio.servicio.salacine.ServicioCrearSalaCineTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-02-24T19:13:19" hostname="SANTIAGO-GARCIA" time="0.007">
   <properties/>
   <testcase name="ejecutarTest()" classname="com.ceiba.cinemax.dominio.servicio.salacine.ServicioCrearSalaCineTest" time="0.003"/>
   <testcase name="validarExistenciaDeSalaCineTest()" classname="com.ceiba.cinemax.dominio.servicio.salacine.ServicioCrearSalaCineTest" time="0.002"/>

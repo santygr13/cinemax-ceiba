@@ -10,6 +10,7 @@ const routes: Routes = [
   { path: '', loadChildren: () => import('./feature/salacine/salacine.module').then(m => m.SalacineModule) },
   { path: '**', redirectTo: '' }
 
+  
 ];
 
 @NgModule({

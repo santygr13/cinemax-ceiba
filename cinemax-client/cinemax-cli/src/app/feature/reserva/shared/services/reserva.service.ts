@@ -13,8 +13,6 @@ export class ReservaService extends BaseService{
   }
 
 
- 
-
   getRservas() {
     return this.doGet<Reserva[]>(`${environment.endpoint}/reserva`)
   }

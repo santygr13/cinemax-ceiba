@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.ceiba.cinemax.infraestructura.controlador.entidad.EntidadPeliculaTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-02-24T16:50:34" hostname="SANTIAGO-GARCIA" time="0.0">
+<testsuite name="com.ceiba.cinemax.infraestructura.controlador.entidad.EntidadPeliculaTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-02-24T19:13:34" hostname="SANTIAGO-GARCIA" time="0.001">
   <properties/>
-  <testcase name="funcionamientoGetPeliculaTest()" classname="com.ceiba.cinemax.infraestructura.controlador.entidad.EntidadPeliculaTest" time="0.0"/>
+  <testcase name="funcionamientoGetPeliculaTest()" classname="com.ceiba.cinemax.infraestructura.controlador.entidad.EntidadPeliculaTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

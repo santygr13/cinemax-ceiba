@@ -22,17 +22,17 @@ public class ServicioCrearSalaCineTest {
 
     @BeforeEach
     public void init(){
-
         repositorioSalaCine=Mockito.mock(RepositorioSalaCine.class);
-
         servicioCrearSalaCine= new ServicioCrearSalaCine(repositorioSalaCine);
         servicioEstadoSalaCine= new ServicioEstadoSalaCine(repositorioSalaCine);
     }
 
     @Test
     public void cambiarEstadoSalaCineTest(){
+
         SalaCine salaCine= new SalaCineTestDataBuilder().build();
         salaCine.setEstadoSalaCine(false);
+
         Mockito.when(repositorioSalaCine
                 .filtrarSalaCinePorNumeroSalaCinePeliculaEnPelicula(Mockito.any()))
                 .thenReturn(salaCine);
@@ -49,10 +49,11 @@ public class ServicioCrearSalaCineTest {
     @Test
     public void validarExistenciaDeSalaCineTest(){
         try {
-
             SalaCine salaCine= new SalaCineTestDataBuilder().conNumeroSalaCine("1").build();
+
             Mockito.when(repositorioSalaCine.existe(Mockito.any())).thenReturn(true);
             servicioCrearSalaCine.ejecutar(salaCine);
+
             Assertions.fail();
         }catch (ExcepcionDuplicidad e){
             Assertions.assertEquals(LA_SALA_CINE_YA_EXISTE,e.getMessage());
@@ -62,8 +63,10 @@ public class ServicioCrearSalaCineTest {
     @Test
     public void ejecutarTest(){
             SalaCine salaCine = new SalaCineTestDataBuilder().build();
+
             Mockito.when(repositorioSalaCine.existe(Mockito.any())).thenReturn(true);
             Mockito.doNothing().when(repositorioSalaCine).guardar(salaCine);
+
         try {
             servicioCrearSalaCine.ejecutar(salaCine);
             Assertions.fail();

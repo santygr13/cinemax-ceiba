@@ -34,10 +34,8 @@ export class CrearPeliculaComponent implements OnInit {
       this.salaCine = data;
       console.log(this.salaCine)
     });
-
-
-
   }
+
   OnSubmit(form: NgForm) {
     console.log(this.pelicula);
     this.peliculaService.create(this.pelicula)

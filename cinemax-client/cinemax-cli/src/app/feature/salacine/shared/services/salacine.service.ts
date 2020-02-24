@@ -12,10 +12,6 @@ export class SalacineService  extends BaseService{
     super(http)
   }
 
-  
-
-
-
   public getSalas(){
     return this.doGet<SalaCine[]>(`${environment.endpoint}/salacine`)
   }

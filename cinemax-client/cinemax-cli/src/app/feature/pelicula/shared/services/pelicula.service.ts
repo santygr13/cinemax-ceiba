@@ -14,9 +14,6 @@ export class PeliculaService extends BaseService {
   }
  
 
-
-
-
   public getPeliculas() {
     return this.doGet<Pelicula[]>(`${environment.endpoint}/pelicula`)
   }
