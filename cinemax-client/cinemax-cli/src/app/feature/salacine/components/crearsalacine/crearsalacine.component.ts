@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { SalacineService } from '../../shared/services/salacine.service';
-import { SalaCine } from '../../shared/model/salacine';
+
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
+import { SalacineService } from '../../../../shared/services/salacine.service';
+import { SalaCine } from '../../../../shared/model/salacine';
+
 
 @Component({
   selector: 'app-crearsalacine',

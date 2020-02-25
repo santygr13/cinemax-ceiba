@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Pelicula } from '../../shared/model/pelicula';
-import { PeliculaService } from '../../shared/services/pelicula.service';
 import { NgForm } from '@angular/forms';
-import { SalacineService } from '../../../salacine/shared/services/salacine.service';
-import { SalaCine } from '../../../salacine/shared/model/salacine';
 import Swal from 'sweetalert2';
+import { Pelicula } from '../../../../shared/model/pelicula';
+import { SalaCine } from 'src/app/shared/model/salacine';
+import { SalacineService } from 'src/app/shared/services/salacine.service';
+import { PeliculaService } from '../../../../shared/services/pelicula.service';
+
 
 
 @Component({
@@ -26,7 +27,6 @@ export class CrearPeliculaComponent implements OnInit {
 
   ngOnInit() {
     this.getSalas();
-
   }
 
   getSalas() {
@@ -48,7 +48,6 @@ export class CrearPeliculaComponent implements OnInit {
           text: 'La pelicula se creo con exito',
           showConfirmButton: true
         });
-
       });
 
   }

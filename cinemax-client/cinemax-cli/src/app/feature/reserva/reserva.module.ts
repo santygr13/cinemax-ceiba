@@ -5,12 +5,8 @@ import { CrearReservaComponent } from './components/crear-reserva/crear-reserva.
 import { ListarReservaComponent } from './components/listar-reserva/listar-reserva.component';
 import { ReservaService } from './shared/services/reserva.service';
 import { FormsModule } from '@angular/forms';
-import { PeliculaService } from '../pelicula/shared/services/pelicula.service';
 import { SharedModule } from 'src/app/shared/shared.module';
-
-
-
-
+import { PeliculaService } from 'src/app/shared/services/pelicula.service';
 
 
 @NgModule({
@@ -26,4 +22,5 @@ import { SharedModule } from 'src/app/shared/shared.module';
   ],
   providers: [ReservaService,PeliculaService]
 })
+
 export class ReservaModule { }

@@ -3,9 +3,10 @@ import { NgForm } from '@angular/forms';
 import { ReservaService } from '../../shared/services/reserva.service';
 import { Router } from '@angular/router';
 import { Reserva } from 'src/app/feature/reserva/shared/model/reserva';
-import { Pelicula } from 'src/app/feature/pelicula/shared/model/pelicula';
-import { PeliculaService } from 'src/app/feature/pelicula/shared/services/pelicula.service';
 import Swal from 'sweetalert2'
+import { PeliculaService } from 'src/app/shared/services/pelicula.service';
+import { Pelicula } from 'src/app/shared/model/pelicula';
+
 
 
 @Component({
