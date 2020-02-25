@@ -6,7 +6,7 @@ import { CrearPeliculaComponent } from './components/crear-pelicula/crear-pelicu
 import { FormsModule } from '@angular/forms';
 import { ListarPeliculaComponent } from './components/listar-pelicula/listar-pelicula.component';
 import { SalacineService } from '../salacine/shared/services/salacine.service';
-import { Module } from 'src/app/shared/shared.module';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 
@@ -22,7 +22,7 @@ import { Module } from 'src/app/shared/shared.module';
     CommonModule,
     PeliculaRoutingModule,
     FormsModule,
-    Module
+    SharedModule
   ],
   providers: [PeliculaService,SalacineService]
 })

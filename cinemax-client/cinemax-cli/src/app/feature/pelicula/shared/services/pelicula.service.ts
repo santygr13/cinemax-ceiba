@@ -18,7 +18,7 @@ export class PeliculaService extends BaseService {
     return this.doGet<Pelicula[]>(`${environment.endpoint}/pelicula`)
   }
 
-  
+
   public create(pelicula: Pelicula){
     return this.doPost<Pelicula,boolean>(`${environment.endpoint}/pelicula`,pelicula)
 

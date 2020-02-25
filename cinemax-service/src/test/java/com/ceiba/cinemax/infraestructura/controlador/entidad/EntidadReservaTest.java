@@ -1,7 +1,6 @@
 package com.ceiba.cinemax.infraestructura.controlador.entidad;
 
 import com.ceiba.cinemax.infraestructura.entidad.FacturaEntidad;
-import com.ceiba.cinemax.infraestructura.entidad.PeliculaEntidad;
 import com.ceiba.cinemax.infraestructura.entidad.ReservaEntidad;
 import com.ceiba.cinemax.testdatabuilder.infraestructura.entidad.EntidadReservaTestDataBuilder;
 import org.junit.jupiter.api.Assertions;

@@ -45,7 +45,7 @@ describe('CineMaxApp interaction', function () {
         browser.sleep(1000);
         element(by.id('btnCrearSalaCine')).click();
         element(by.buttonText('Crear')).click();
-        expect()
+        
     });
 
 

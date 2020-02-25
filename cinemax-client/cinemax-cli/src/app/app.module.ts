@@ -5,7 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { AppComponent } from './app.component';
-import { Module } from './shared/shared.module';
+import { SharedModule } from './shared/shared.module';
 
 
 
@@ -20,7 +20,7 @@ import { Module } from './shared/shared.module';
     FormsModule,
     HttpClientModule,
     CommonModule,
-    Module
+    SharedModule
 
   ],
 

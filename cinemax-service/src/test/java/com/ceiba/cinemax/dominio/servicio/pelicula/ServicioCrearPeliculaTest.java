@@ -1,19 +1,13 @@
 package com.ceiba.cinemax.dominio.servicio.pelicula;
 
 import com.ceiba.cinemax.dominio.excepcion.ExcepcionDuplicidad;
-import com.ceiba.cinemax.dominio.excepcion.ExcepcionExistenciaPelicula;
 import com.ceiba.cinemax.dominio.excepcion.ExcepcionExistenciaSalaCine;
 import com.ceiba.cinemax.dominio.modelo.Pelicula;
-import com.ceiba.cinemax.dominio.modelo.Reserva;
-import com.ceiba.cinemax.dominio.modelo.SalaCine;
 import com.ceiba.cinemax.dominio.puerto.repositorio.RepositorioPelicula;
 import com.ceiba.cinemax.dominio.puerto.repositorio.RepositorioSalaCine;
 import com.ceiba.cinemax.dominio.servicio.salacine.ServicioCapacidadSalaCine;
 import com.ceiba.cinemax.dominio.servicio.salacine.ServicioEstadoSalaCine;
-import com.ceiba.cinemax.infraestructura.convertidor.reserva.salacine.ConvertidorSalaCine;
-import com.ceiba.cinemax.infraestructura.entidad.SalaCineEntidad;
 import com.ceiba.cinemax.testdatabuilder.dominio.modelo.PeliculaTestDataBuilder;
-import com.ceiba.cinemax.testdatabuilder.dominio.modelo.ReservaTestDataBuilder;
 import com.ceiba.cinemax.testdatabuilder.dominio.modelo.SalaCineTestDataBuilder;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;

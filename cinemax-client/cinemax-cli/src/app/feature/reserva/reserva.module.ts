@@ -6,7 +6,7 @@ import { ListarReservaComponent } from './components/listar-reserva/listar-reser
 import { ReservaService } from './shared/services/reserva.service';
 import { FormsModule } from '@angular/forms';
 import { PeliculaService } from '../pelicula/shared/services/pelicula.service';
-import { Module } from 'src/app/shared/shared.module';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 
@@ -22,7 +22,7 @@ import { Module } from 'src/app/shared/shared.module';
     CommonModule,
     ReservaRoutingModule,
     FormsModule, 
-    Module
+    SharedModule
   ],
   providers: [ReservaService,PeliculaService]
 })

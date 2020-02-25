@@ -1,7 +1,7 @@
 package com.ceiba.cinemax.infraestructura.controlador;
 import com.ceiba.cinemax.CinemaxApplication;
 import com.ceiba.cinemax.aplicacion.comando.ComandoReserva;
-import com.ceiba.cinemax.dominio.modelo.Factura;
+
 import com.ceiba.cinemax.dominio.modelo.Pelicula;
 import com.ceiba.cinemax.dominio.modelo.Reserva;
 import com.ceiba.cinemax.dominio.modelo.SalaCine;
@@ -23,7 +23,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.web.context.WebApplicationContext;
 import javax.transaction.Transactional;
 import java.time.LocalDate;
-import java.util.ArrayList;
+
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
@@ -91,7 +91,7 @@ public class ControladorReservaTest {
         Pelicula primeraPelicula = new Pelicula("transformers", salaCine1, salaCine1.getNumeroSalaCine());
         repositorioPeliculaPostgreSql.guardar(primeraPelicula);
 
-//        Factura factura=new Factura(LocalDate.of(2020,02,27),21000);
+
         Reserva reserva = new Reserva(1L, LocalDate.of(2020, 02, 27), 1037854939, "Santiago", 3, primeraPelicula.getNombre(), new FacturaTestDataBuilder().build());
         repositorioReservaPostgreSql.guardar(reserva);
 
@@ -101,14 +101,12 @@ public class ControladorReservaTest {
                 .contentType(MediaType.APPLICATION_JSON)
                 ).andDo(print()).andExpect(status().isOk())
 
-               // .andExpect(jsonPath("[0].idReserva").value(1))
+
                 .andExpect(jsonPath("[0].fechaReservaPelicula").value(LocalDate.of(2020, 02, 27).toString()))
                 .andExpect(jsonPath("[0].documentoCliente").value(1037854939))
                 .andExpect(jsonPath("[0].nombreCliente").value("Santiago"))
                 .andExpect(jsonPath("[0].cantidadPuestos").value(3))
                 .andExpect(jsonPath("[0].nombrePelicula").value("transformers"));
-//                .andExpect(jsonPath("[0].factura.fechaReserva").value(LocalDate.of(2020,02,27)))
-//                .andExpect(jsonPath("[0].factura.valor").value(21000));
 
 
     }

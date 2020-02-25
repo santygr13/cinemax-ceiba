@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { PrincipalRoutingModule } from './principal-routing.module';
 import { PrincipalComponent } from './components/principal.component';
-import { Module } from 'src/app/shared/shared.module';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 
@@ -14,7 +14,7 @@ import { Module } from 'src/app/shared/shared.module';
   imports: [
     CommonModule,
     PrincipalRoutingModule,
-    Module
+    SharedModule
 
   ],
   exports:[]

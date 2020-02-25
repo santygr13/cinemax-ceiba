@@ -1,9 +1,8 @@
 package com.ceiba.cinemax.testdatabuilder.dominio.modelo;
 
 import com.ceiba.cinemax.dominio.modelo.Factura;
-import com.ceiba.cinemax.dominio.modelo.Pelicula;
 import com.ceiba.cinemax.dominio.modelo.Reserva;
-import com.ceiba.cinemax.dominio.modelo.SalaCine;
+
 
 import java.time.LocalDate;
 

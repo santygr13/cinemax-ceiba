@@ -79,9 +79,8 @@ public class ControladorPeliculaTest {
                 .accept(MediaType.APPLICATION_JSON))
                 .andDo(print())
                 .andExpect(status().is4xxClientError());
+
     }
-
-
 
     @Test
     public void listarPeliculaTest() throws Exception{

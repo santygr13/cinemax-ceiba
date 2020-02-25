@@ -2,7 +2,7 @@ package com.ceiba.cinemax.testdatabuilder.aplicacion;
 
 import com.ceiba.cinemax.aplicacion.comando.ComandoPelicula;
 import com.ceiba.cinemax.dominio.modelo.SalaCine;
-import com.ceiba.cinemax.testdatabuilder.dominio.modelo.SalaCineTestDataBuilder;
+
 
 
 public class ComandoPeliculaTestDataBuilder {

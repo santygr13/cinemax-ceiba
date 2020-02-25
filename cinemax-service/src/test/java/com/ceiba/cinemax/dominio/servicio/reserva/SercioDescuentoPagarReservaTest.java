@@ -1,8 +1,5 @@
 package com.ceiba.cinemax.dominio.servicio.reserva;
 
-
-
-
 import com.ceiba.cinemax.dominio.excepcion.ExcepcionExistenciaPelicula;
 import com.ceiba.cinemax.dominio.modelo.Reserva;
 import com.ceiba.cinemax.dominio.puerto.repositorio.RepositorioPelicula;

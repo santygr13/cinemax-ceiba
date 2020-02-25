@@ -3,8 +3,6 @@ package com.ceiba.cinemax.dominio.servicio.salacine;
 import com.ceiba.cinemax.dominio.excepcion.ExcepcionEstadoSalaCine;
 import com.ceiba.cinemax.dominio.modelo.SalaCine;
 import com.ceiba.cinemax.dominio.puerto.repositorio.RepositorioSalaCine;
-
-
 import org.springframework.stereotype.Service;
 
 @Service
