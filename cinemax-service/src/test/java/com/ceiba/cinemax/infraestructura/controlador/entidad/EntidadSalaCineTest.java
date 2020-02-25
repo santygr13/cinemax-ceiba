@@ -5,6 +5,7 @@ import com.ceiba.cinemax.testdatabuilder.infraestructura.entidad.EntidadSalaCine
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+
 public class EntidadSalaCineTest {
 
 
