@@ -84,6 +84,19 @@ public class ServicioCrearSalaCineTest {
 
     }
 
+    @Test
+    public void capacidadSalaCineSinCapacidadTest(){
+
+        Reserva reserva= new ReservaTestDataBuilder().conCantidadPuestos(3).build();
+        SalaCine salaCine= new  SalaCineTestDataBuilder().conCapacidadSillas(1).build();
+        Mockito.when(repositorioSalaCine.filtroCapacidadPorNombrePelicula(Mockito.any())).thenReturn(salaCine);
+
+        Assertions.assertFalse(servicioCapacidadSalaCine.capacidadSalaCine(reserva.getNombrePelicula()
+                ,reserva.getCantidadPuestos()));
+
+    }
+
+
 
     @Test
     public void ejecutarTest(){
