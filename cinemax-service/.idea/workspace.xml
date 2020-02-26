@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83ae6e60-66d8-4380-b018-020017de4091" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../cinemax-client/cinemax-cli/src/app/feature/pelicula/components/crear-pelicula/crear-pelicula.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../cinemax-client/cinemax-cli/src/app/feature/pelicula/components/crear-pelicula/crear-pelicula.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cinemax-client/cinemax-cli/src/app/feature/pelicula/pelicula.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../cinemax-client/cinemax-cli/src/app/feature/pelicula/pelicula.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cinemax-client/cinemax-cli/src/app/feature/reserva/reserva.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../cinemax-client/cinemax-cli/src/app/feature/reserva/reserva.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cinemax-client/cinemax-cli/src/app/shared/shared.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../cinemax-client/cinemax-cli/src/app/shared/shared.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -37,6 +33,7 @@
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/ceiba/cinemax/dominio/servicio/salacine/ServicioCrearSalaCineTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ceiba/cinemax/dominio/servicio/salacine/ServicioCrearSalaCineTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,26 +120,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Gradle.run">
-    <configuration name="ControladorPeliculaTest.crearPelicula" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.ceiba.cinemax.infraestructura.controlador.ControladorPeliculaTest.crearPelicula&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":cleanTest" />
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
     <configuration name="ControladorReservaTest.listarReservaTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -203,6 +180,26 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="ServicioCrearSalaCineTest.capacidadSalaCineTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;com.ceiba.cinemax.dominio.servicio.salacine.ServicioCrearSalaCineTest.capacidadSalaCineTest&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="ServicioCrearSalaCineTest.ejecutarTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -247,18 +244,18 @@
     <list>
       <item itemvalue="Gradle.run" />
       <item itemvalue="Gradle.ControladorReservaTest.listarReservaTest" />
-      <item itemvalue="Gradle.ControladorPeliculaTest.crearPelicula" />
       <item itemvalue="Gradle.ServicioCrearSalaCineTest.cambiarEstadoSalaCineTest" />
       <item itemvalue="Gradle.ControladorSalaCineTest.listarSalaCineList" />
       <item itemvalue="Gradle.ServicioCrearSalaCineTest.ejecutarTest" />
+      <item itemvalue="Gradle.ServicioCrearSalaCineTest.capacidadSalaCineTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.ServicioCrearSalaCineTest.capacidadSalaCineTest" />
         <item itemvalue="Gradle.ControladorReservaTest.listarReservaTest" />
         <item itemvalue="Gradle.ServicioCrearSalaCineTest.cambiarEstadoSalaCineTest" />
         <item itemvalue="Gradle.ServicioCrearSalaCineTest.ejecutarTest" />
         <item itemvalue="Gradle.ControladorSalaCineTest.listarSalaCineList" />
-        <item itemvalue="Gradle.ControladorPeliculaTest.crearPelicula" />
       </list>
     </recent_temporary>
   </component>
@@ -336,29 +333,29 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="580" y="186" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1579995863080" />
-    <state width="1557" height="145" key="GridCell.Tab.0.bottom" timestamp="1582665599864">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state width="1557" height="107" key="GridCell.Tab.0.bottom" timestamp="1582727226450">
+      <screen x="1600" y="0" width="1600" height="860" />
     </state>
     <state width="1557" height="145" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.0.1600.860@0.0.1600.860" timestamp="1582665599864" />
-    <state width="1557" height="41" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.0.1600.860@1600.0.1600.860" timestamp="1582571583799" />
+    <state width="1557" height="107" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.0.1600.860@1600.0.1600.860" timestamp="1582727226450" />
     <state width="1557" height="346" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1582579720298" />
-    <state width="1557" height="145" key="GridCell.Tab.0.center" timestamp="1582665599864">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state width="1557" height="107" key="GridCell.Tab.0.center" timestamp="1582727226450">
+      <screen x="1600" y="0" width="1600" height="860" />
     </state>
     <state width="1557" height="145" key="GridCell.Tab.0.center/0.0.1600.860/1600.0.1600.860@0.0.1600.860" timestamp="1582665599864" />
-    <state width="1557" height="41" key="GridCell.Tab.0.center/0.0.1600.860/1600.0.1600.860@1600.0.1600.860" timestamp="1582571583798" />
+    <state width="1557" height="107" key="GridCell.Tab.0.center/0.0.1600.860/1600.0.1600.860@1600.0.1600.860" timestamp="1582727226450" />
     <state width="1557" height="346" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1582579720298" />
-    <state width="1557" height="145" key="GridCell.Tab.0.left" timestamp="1582665599863">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state width="1557" height="107" key="GridCell.Tab.0.left" timestamp="1582727226449">
+      <screen x="1600" y="0" width="1600" height="860" />
     </state>
     <state width="1557" height="145" key="GridCell.Tab.0.left/0.0.1600.860/1600.0.1600.860@0.0.1600.860" timestamp="1582665599863" />
-    <state width="1557" height="41" key="GridCell.Tab.0.left/0.0.1600.860/1600.0.1600.860@1600.0.1600.860" timestamp="1582571583798" />
+    <state width="1557" height="107" key="GridCell.Tab.0.left/0.0.1600.860/1600.0.1600.860@1600.0.1600.860" timestamp="1582727226449" />
     <state width="1557" height="346" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1582579720298" />
-    <state width="1557" height="145" key="GridCell.Tab.0.right" timestamp="1582665599864">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state width="1557" height="107" key="GridCell.Tab.0.right" timestamp="1582727226450">
+      <screen x="1600" y="0" width="1600" height="860" />
     </state>
     <state width="1557" height="145" key="GridCell.Tab.0.right/0.0.1600.860/1600.0.1600.860@0.0.1600.860" timestamp="1582665599864" />
-    <state width="1557" height="41" key="GridCell.Tab.0.right/0.0.1600.860/1600.0.1600.860@1600.0.1600.860" timestamp="1582571583798" />
+    <state width="1557" height="107" key="GridCell.Tab.0.right/0.0.1600.860/1600.0.1600.860@1600.0.1600.860" timestamp="1582727226450" />
     <state width="1557" height="346" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1582579720298" />
     <state width="1557" height="255" key="GridCell.Tab.1.bottom" timestamp="1582562900814">
       <screen x="1600" y="0" width="1600" height="860" />
