@@ -26,7 +26,9 @@ export class CrearPeliculaComponent implements OnInit {
 
 
   ngOnInit() {
+    
     this.getSalas();
+    
   }
 
   getSalas() {

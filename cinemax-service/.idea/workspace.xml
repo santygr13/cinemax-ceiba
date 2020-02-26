@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83ae6e60-66d8-4380-b018-020017de4091" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../cinemax-client/cinemax-cli/e2e/interaction.js" beforeDir="false" afterPath="$PROJECT_DIR$/../cinemax-client/cinemax-cli/e2e/interaction.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../cinemax-client/cinemax-cli/src/app/feature/pelicula/components/crear-pelicula/crear-pelicula.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../cinemax-client/cinemax-cli/src/app/feature/pelicula/components/crear-pelicula/crear-pelicula.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cinemax-client/cinemax-cli/src/app/feature/pelicula/components/listar-pelicula/listar-pelicula.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../cinemax-client/cinemax-cli/src/app/feature/pelicula/components/listar-pelicula/listar-pelicula.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../cinemax-client/cinemax-cli/src/app/feature/pelicula/pelicula.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../cinemax-client/cinemax-cli/src/app/feature/pelicula/pelicula.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../cinemax-client/cinemax-cli/src/app/feature/reserva/reserva.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../cinemax-client/cinemax-cli/src/app/feature/reserva/reserva.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cinemax-client/cinemax-cli/src/app/feature/salacine/salacine.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../cinemax-client/cinemax-cli/src/app/feature/salacine/salacine.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../cinemax-client/cinemax-cli/src/app/shared/shared.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../cinemax-client/cinemax-cli/src/app/shared/shared.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/fileHashes/fileHashes.bin" afterDir="false" />

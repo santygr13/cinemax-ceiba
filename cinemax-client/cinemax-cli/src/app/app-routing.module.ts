@@ -9,8 +9,7 @@ const routes: Routes = [
   { path: '', loadChildren: () => import('./feature/reserva/reserva.module').then(m => m.ReservaModule) },
   { path: '', loadChildren: () => import('./feature/salacine/salacine.module').then(m => m.SalacineModule) },
   { path: '**', redirectTo: '' }
-
-  
+ 
 ];
 
 @NgModule({

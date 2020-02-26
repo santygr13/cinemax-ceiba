@@ -22,6 +22,6 @@ import { SalacineService } from '../../shared/services/salacine.service';
     SharedModule
 
   ],
-  providers: [PeliculaService,SalacineService]
+  providers: [PeliculaService]
 })
 export class PeliculaModule { }

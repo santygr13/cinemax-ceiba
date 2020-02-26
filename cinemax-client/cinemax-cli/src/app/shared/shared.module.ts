@@ -2,8 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header/header.component';
 import { FooterComponent } from './footer/footer/footer.component';
-import { PeliculaService } from './services/pelicula.service';
-import { SalacineService } from './services/salacine.service';
+
+
+
 
 
 
@@ -11,7 +12,8 @@ import { SalacineService } from './services/salacine.service';
   declarations: [HeaderComponent, FooterComponent],
   imports: [
     CommonModule
+  
   ],
   exports: [HeaderComponent,FooterComponent]
 })
-export class SharedModule { }
+export class SharedModule {}

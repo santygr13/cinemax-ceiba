@@ -20,7 +20,7 @@ import { PeliculaService } from 'src/app/shared/services/pelicula.service';
     FormsModule, 
     SharedModule
   ],
-  providers: [ReservaService,PeliculaService]
+  providers: [ReservaService]
 })
 
 export class ReservaModule { }

@@ -26,6 +26,7 @@ export class CrearReservaComponent implements OnInit {
     private router: Router, private servicioPelicula: PeliculaService) { }
 
   ngOnInit() {
+    
     this.reserva = new Reserva();
     this.getpeliculas();
   }
