@@ -12,7 +12,7 @@ public class PeliculaTest {
     private static final SalaCine SALA_CINE= Mockito.mock(SalaCine.class);
     private static final   String NUMERO_SALA_CINE="1";
 
-    @Test
+
     void funcionamientoGetterPelicula(){
 
         Pelicula pelicula= new PeliculaTestDataBuilder().build();

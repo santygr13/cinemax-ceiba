@@ -18,7 +18,7 @@ public class ReservaTest {
     private static final String PELICULA= "Transformers";
     private static final Factura FACTURA=Mockito.mock(Factura.class);
 
-    @Test
+
     void CreacionReservaTest(){
 
         Reserva reserva = new ReservaTestDataBuilder().build();

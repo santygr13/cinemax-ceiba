@@ -11,7 +11,7 @@ public class FacturaTest {
     private static final LocalDate FECHA_REGISTRO=LocalDate.of(2019,5,28);
     private static final double VALOR_PAGAR=49000;
 
-    @Test
+
     void  funcionamientoGetterAndSetterDeFacturaTest(){
 
         Factura factura = new Factura(LocalDate.now(),49000);

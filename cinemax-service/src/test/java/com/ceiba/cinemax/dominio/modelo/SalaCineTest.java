@@ -12,7 +12,7 @@ public class SalaCineTest {
     private static final int CAPACIDAD_SILLAS=300;
     private static final boolean ESTADO_SALA_CINE= true;
 
-    @Test
+
     void funcionamientoGetterSalaCine(){
         SalaCine salaCine= new SalaCineTestDataBuilder().build();
 
