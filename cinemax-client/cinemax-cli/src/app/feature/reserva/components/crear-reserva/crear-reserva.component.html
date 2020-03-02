@@ -1,4 +1,3 @@
-
 <div class="jumbotron">
   <h1 class="display-6">CREAR RESERVA</h1>
   <form #form="ngForm">
@@ -41,7 +40,7 @@
       </div>
 
       <div class="input-field col s3">
-        <label for="myListOptions">Nombre Pelicula</label>
+        <label for="listaOpciones">Nombre Pelicula</label>
         <select class="form-control" id="listaOpciones" name="nombrePelicula " [(ngModel)]="reserva.nombrePelicula">
 
           <option *ngFor="let pelicula of pelicula" [ngValue]="pelicula.nombre">

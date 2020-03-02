@@ -51,7 +51,7 @@ export class CrearPeliculaComponent implements OnInit {
           showConfirmButton: true
         });
       });
-
+      
   }
 
 }

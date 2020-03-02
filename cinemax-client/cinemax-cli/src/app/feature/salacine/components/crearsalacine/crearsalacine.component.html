@@ -1,4 +1,3 @@
-
 <div class="jumbotron">
     <h1 class="display-6">CREAR SALA CINE</h1>
     <form #form="ngForm">
@@ -8,7 +7,8 @@
                 <label for="inputnumeroSalaCine">NUMERO SALA CINE</label>
                 <input type="text" class="form-control" id="inputnumeroSalaCine" placeholder="Numero Sala Cine"
                     [(ngModel)]="salacine.numeroSalaCine" name="numeroSalaCine" required #numeroSalaCine="ngModel">
-                <div class="alert alert-danger" *ngIf="numeroSalaCine.invalid && (numeroSalaCine.dirty || numeroSalaCine.touched)">
+                <div class="alert alert-danger"
+                    *ngIf="numeroSalaCine.invalid && (numeroSalaCine.dirty || numeroSalaCine.touched)">
                     <div *ngIf="numeroSalaCine.errors.required">
                         El numero de sala cine es requerido
                     </div>
@@ -17,9 +17,11 @@
 
             <div class="form-group col-md-6">
                 <label for="inputcapacidadsillas">CAPACIDAD SILLAS</label>
-                <input type="number"  min="1" pattern="^[0-9]+"class="form-control" id="inputcapacidadsillas" placeholder="Capacidad de sillas"
-                    [(ngModel)]="salacine.capacidadSillas" name="capacidadSillas" required #capacidadSillas="ngModel">
-                <div class="alert alert-danger" *ngIf="capacidadSillas.invalid && (capacidadSillas.dirty || capacidadSillas.touched)">
+                <input type="number" min="1" pattern="^[0-9]+" class="form-control" id="inputcapacidadsillas"
+                    placeholder="Capacidad de sillas" [(ngModel)]="salacine.capacidadSillas" name="capacidadSillas"
+                    required #capacidadSillas="ngModel">
+                <div class="alert alert-danger"
+                    *ngIf="capacidadSillas.invalid && (capacidadSillas.dirty || capacidadSillas.touched)">
                     <div *ngIf="capacidadSillas.errors.required">
                         El capacidad de sillas es requerida
                     </div>
@@ -27,9 +29,10 @@
             </div>
 
             <div class="input-field col s3">
-                <label for="myListOptions">ESTADO DE LA SALA CINE</label>
-                <select class="form-control" id="listaOpciones" name="estadoSalaCine" [(ngModel)]="salacine.estadoSalaCine" #estadoSalaCine="ngModel">
-                    <option value="true">Habilitado</option>
+                <label for="listaOpciones">ESTADO DE LA SALA CINE</label>
+                <select class="form-control" id="listaOpciones" name="estadoSalaCine"
+                    [(ngModel)]="salacine.estadoSalaCine" #estadoSalaCine="ngModel" required #estadoSalaCine="ngModel">
+                    <option value="true">Habilitada</option>
                     <option value="false">Deshabilitada</option>
                 </select>
             </div>
@@ -38,7 +41,7 @@
 
         <div class="btn-group" role="group" aria-label="Basic example">
             <button type="submit" class="btn btn-primary" (click)="OnSubmit(form)" id="btnCrearSalaCine"
-                [disabled]="numeroSalaCine.invalid">Crear</button>
+                [disabled]="numeroSalaCine.invalid || estadoSalaCine.invalid || capacidadSillas.invalid ">Crear</button>
         </div>
 
         <div class="btn-group" role="group" aria-label="Basic example">

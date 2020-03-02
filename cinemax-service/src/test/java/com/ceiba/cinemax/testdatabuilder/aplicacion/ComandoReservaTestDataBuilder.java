@@ -9,12 +9,12 @@ import java.time.LocalDate;
 public class ComandoReservaTestDataBuilder {
 
     private static final Long ID_RESERVA=1L;
-    private static final LocalDate FECHA_RESERVA_PELICULA = LocalDate.of(2020,02,27);
+    private static final LocalDate FECHA_RESERVA_PELICULA = LocalDate.of(2020,03,28);
     private static final int CANTIDAD_PUESTOS=3;
     private static final int DOCUMENTO_CLIENTE=1037854939;
     private static final String NOMBRE_CLIENTE="Santiago";
     private static final String PELICULA= "Transformers";
-    private static final Factura FACTURA= new Factura(LocalDate.of(2020,02,05),21000);
+    private static final Factura FACTURA= new Factura(LocalDate.of(2020,03,28),21000);
 
 
 

@@ -92,7 +92,7 @@ public class ControladorReservaTest {
         repositorioPeliculaPostgreSql.guardar(primeraPelicula);
 
 
-        Reserva reserva = new Reserva(1L, LocalDate.of(2020, 02, 27), 1037854939, "Santiago", 3, primeraPelicula.getNombre(), new FacturaTestDataBuilder().build());
+        Reserva reserva = new Reserva(1L, LocalDate.of(2020, 03, 27), 1037854939, "Santiago", 3, primeraPelicula.getNombre(), new FacturaTestDataBuilder().build());
         repositorioReservaPostgreSql.guardar(reserva);
 
 
@@ -102,7 +102,7 @@ public class ControladorReservaTest {
                 ).andDo(print()).andExpect(status().isOk())
 
 
-                .andExpect(jsonPath("[0].fechaReservaPelicula").value(LocalDate.of(2020, 02, 27).toString()))
+                .andExpect(jsonPath("[0].fechaReservaPelicula").value(LocalDate.of(2020, 03, 27).toString()))
                 .andExpect(jsonPath("[0].documentoCliente").value(1037854939))
                 .andExpect(jsonPath("[0].nombreCliente").value("Santiago"))
                 .andExpect(jsonPath("[0].cantidadPuestos").value(3))

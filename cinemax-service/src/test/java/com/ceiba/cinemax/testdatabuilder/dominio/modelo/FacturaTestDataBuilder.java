@@ -6,7 +6,7 @@ import java.time.LocalDate;
 
 public class FacturaTestDataBuilder {
 
-    private static final LocalDate FECHA_RESERVA = LocalDate.of(2020,02,27);
+    private static final LocalDate FECHA_RESERVA = LocalDate.of(2020,03,27);
     private static final int VALOR_PAGAR=49000;
 
     private LocalDate fechaReserva;

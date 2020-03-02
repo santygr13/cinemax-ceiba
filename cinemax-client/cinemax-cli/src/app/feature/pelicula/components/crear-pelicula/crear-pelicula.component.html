@@ -17,7 +17,7 @@
             </div>
 
             <div class="input-field col s3">
-                <label for="myListOptions">Numero de Sala</label>
+                <label for="listaOpciones">Numero de Sala</label>
                 <select class="form-control" id="listaOpciones" name="numeroSalaCine" [(ngModel)]="pelicula.numeroSalaCine"
                     #numeroSalaCine="ngModel">
                     <option *ngFor="let salaCine of salaCine" [ngValue]="salaCine.numeroSalaCine">
@@ -43,3 +43,4 @@
 
     </form>
 </div>
+

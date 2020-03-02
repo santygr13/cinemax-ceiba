@@ -16,6 +16,7 @@ export class SalacineService  extends BaseService{
     return this.doGet<SalaCine[]>(`${environment.endpoint}/salacine`)
   }
 
+  
 
   public create(salacine:SalaCine) {
     return this.doPost<SalaCine,boolean>(`${environment.endpoint}/salacine`,salacine)

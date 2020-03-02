@@ -1,13 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { PeliculaService } from './shared/services/pelicula.service';
 import { SalacineService } from './shared/services/salacine.service';
+import { HttpErrorInterceptor } from './http-error.interceptor';
 
 
 
@@ -26,7 +27,9 @@ import { SalacineService } from './shared/services/salacine.service';
     SharedModule
 
   ],
-  providers: [PeliculaService,SalacineService],
+  providers: [PeliculaService,SalacineService,{provide: HTTP_INTERCEPTORS,
+    useClass: HttpErrorInterceptor,
+    multi: true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
