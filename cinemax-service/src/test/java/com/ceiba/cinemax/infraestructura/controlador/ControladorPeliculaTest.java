@@ -3,6 +3,8 @@ import com.ceiba.cinemax.CinemaxApplication;
 import com.ceiba.cinemax.aplicacion.comando.ComandoPelicula;
 import com.ceiba.cinemax.dominio.modelo.Pelicula;
 import com.ceiba.cinemax.dominio.modelo.SalaCine;
+import com.ceiba.cinemax.dominio.puerto.repositorio.RepositorioPelicula;
+import com.ceiba.cinemax.dominio.puerto.repositorio.RepositorioSalaCine;
 import com.ceiba.cinemax.infraestructura.adaptador.repositorio.RepositorioPeliculaPostgreSql;
 import com.ceiba.cinemax.infraestructura.adaptador.repositorio.RepositorioSalaCinePostgreSql;
 import com.ceiba.cinemax.infraestructura.repositoriojpa.RepositorioPeliculaJpa;
@@ -37,11 +39,13 @@ public class ControladorPeliculaTest {
     @Autowired
     private ObjectMapper objectMapper;
 
-    @Autowired
-    private RepositorioPeliculaJpa repositorioPeliculaJpa;
+
 
     @Autowired
-    private RepositorioSalaCineJpa repositorioSalaCineJpa;
+    private RepositorioPelicula repositorioPelicula;
+
+    @Autowired
+    private RepositorioSalaCine repositorioSalaCine;
 
     @Autowired
     private MockMvc mockMvc;
@@ -53,11 +57,8 @@ public class ControladorPeliculaTest {
 
 
         ComandoPelicula comandoPelicula= new ComandoPeliculaTestDataBuilder().build();
-        RepositorioSalaCinePostgreSql repositorioSalaCinePostgreSql = new RepositorioSalaCinePostgreSql(repositorioSalaCineJpa);
-        RepositorioPeliculaPostgreSql repositorioPeliculaPostgreSql= new RepositorioPeliculaPostgreSql(repositorioPeliculaJpa);
-        repositorioPeliculaPostgreSql.noExiste(comandoPelicula.getNombre());
 
-        repositorioSalaCinePostgreSql.guardar(comandoPelicula.getSalaCine());
+        repositorioSalaCine.guardar(comandoPelicula.getSalaCine());
 
         mockMvc.perform(post("http://localhost:8080/pelicula")
                 .contentType(MediaType.APPLICATION_JSON)
@@ -85,14 +86,13 @@ public class ControladorPeliculaTest {
     @Test
     public void listarPeliculaTest() throws Exception{
 
-        RepositorioPeliculaPostgreSql repositorioPeliculaPostgreSql= new RepositorioPeliculaPostgreSql(repositorioPeliculaJpa);
-        RepositorioSalaCinePostgreSql repositorioSalaCinePostgreSql=new RepositorioSalaCinePostgreSql(repositorioSalaCineJpa);
+
 
         SalaCine salaCine1= new SalaCine("1",200,true);
-        repositorioSalaCinePostgreSql.guardar(salaCine1);
+        repositorioSalaCine.guardar(salaCine1);
 
         Pelicula primeraPelicula= new Pelicula("transformers",salaCine1,"1");
-        repositorioPeliculaPostgreSql.guardar(primeraPelicula);
+        repositorioPelicula.guardar(primeraPelicula);
 
         ArrayList<Pelicula> peliculas = new ArrayList<>();
         peliculas.add(primeraPelicula);

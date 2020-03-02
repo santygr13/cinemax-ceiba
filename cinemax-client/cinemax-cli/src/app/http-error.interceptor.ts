@@ -13,6 +13,7 @@ import Swal from 'sweetalert2';
 
 
 export class HttpErrorInterceptor implements HttpInterceptor {
+
     intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
 
         let headers = new HttpHeaders();
@@ -45,15 +46,16 @@ export class HttpErrorInterceptor implements HttpInterceptor {
                     } else {
                         // server-side error
                         errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
+                        Swal.fire({
+                            position: 'center',
+                            icon: 'error',
+                            title: 'Oops... Error del servidor',
+                            text: errorMessage,
+                            showConfirmButton: true
+                        });
                     }
 
-                    Swal.fire({
-                        position: 'center',
-                        icon: 'error',
-                        title: 'Oops... Error del servidor',
-                        text: errorMessage,
-                        showConfirmButton: true
-                    });
+                    
                     return throwError(errorMessage);
                 })
             )

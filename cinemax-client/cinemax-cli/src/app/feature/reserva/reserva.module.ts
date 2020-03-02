@@ -6,7 +6,7 @@ import { ListarReservaComponent } from './components/listar-reserva/listar-reser
 import { ReservaService } from './shared/services/reserva.service';
 import { FormsModule } from '@angular/forms';
 import { SharedModule } from 'src/app/shared/shared.module';
-import { PeliculaService } from 'src/app/shared/services/pelicula.service';
+
 
 
 @NgModule({

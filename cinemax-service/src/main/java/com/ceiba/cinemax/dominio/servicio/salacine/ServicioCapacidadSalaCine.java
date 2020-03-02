@@ -30,7 +30,6 @@ public class ServicioCapacidadSalaCine {
     }
 
 
-
     public void reducirCapacidadSalaCine(String nombrePelicula, int cantidadEntradas){
         if (capacidadSalaCine(nombrePelicula, cantidadEntradas)){
             ConvertidorSalaCine convertidorSalaCine= new ConvertidorSalaCine();

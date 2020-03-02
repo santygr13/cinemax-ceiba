@@ -3,6 +3,7 @@ package com.ceiba.cinemax.infraestructura.controlador;
 import com.ceiba.cinemax.CinemaxApplication;
 import com.ceiba.cinemax.aplicacion.comando.ComandoSalaCine;
 import com.ceiba.cinemax.dominio.modelo.SalaCine;
+import com.ceiba.cinemax.dominio.puerto.repositorio.RepositorioSalaCine;
 import com.ceiba.cinemax.infraestructura.adaptador.repositorio.RepositorioSalaCinePostgreSql;
 import com.ceiba.cinemax.infraestructura.repositoriojpa.RepositorioSalaCineJpa;
 import com.ceiba.cinemax.testdatabuilder.aplicacion.ComandoSalaCineTestDataBuilder;
@@ -33,8 +34,10 @@ public class ControladorSalaCineTest {
     @Autowired
     private ObjectMapper objectMapper;
 
+
+
     @Autowired
-    private RepositorioSalaCineJpa repositorioSalaCineJpa;
+    private RepositorioSalaCine repositorioSalaCine;
 
     @Autowired
     private MockMvc mockMvc;
@@ -44,7 +47,7 @@ public class ControladorSalaCineTest {
     public void crearSalaCine() throws Exception{
         ComandoSalaCine comandoSalaCine= new ComandoSalaCineTestDataBuilder().build();
 
-        mockMvc.perform(post("http://localhost:8080/salacine")
+        mockMvc.perform(post("http://localhost:4567/salacine")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(comandoSalaCine))
                 .accept(MediaType.APPLICATION_JSON))
@@ -56,16 +59,17 @@ public class ControladorSalaCineTest {
 
     @Test
     public void listarSalaCineList()throws Exception{
-        RepositorioSalaCinePostgreSql repositorioSalaCinePostgreSql = new RepositorioSalaCinePostgreSql(repositorioSalaCineJpa);
+
+
 
         SalaCine primeraSalaCine= new SalaCine("123453",200,true);
-        repositorioSalaCinePostgreSql.guardar(primeraSalaCine);
+        repositorioSalaCine.guardar(primeraSalaCine);
 
 
         ArrayList<SalaCine> salaCines = new ArrayList<>();
         salaCines.add(primeraSalaCine);
 
-        mockMvc.perform(get("http://localhost:8080/salacine")
+        mockMvc.perform(get("http://localhost:4567/salacine")
                 .contentType(MediaType.APPLICATION_JSON)
         )
                 .andDo(print()).andExpect(status().isOk())

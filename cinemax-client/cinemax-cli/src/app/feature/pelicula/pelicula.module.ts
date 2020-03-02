@@ -6,7 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { ListarPeliculaComponent } from './components/listar-pelicula/listar-pelicula.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { PeliculaService } from '../../shared/services/pelicula.service';
-import { SalacineService } from '../../shared/services/salacine.service';
+
 
 
 @NgModule({
