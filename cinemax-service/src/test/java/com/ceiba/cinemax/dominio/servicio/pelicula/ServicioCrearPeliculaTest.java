@@ -59,11 +59,9 @@ public class ServicioCrearPeliculaTest {
         try {
             servicioCrearPelicula.ejecutar(pelicula);
         }catch (ExcepcionExistenciaPelicula e){
-            Assertions.fail(e.getMessage());
+            Assertions.assertEquals(LA_PELICULA_NO_EXISTE,e.getMessage());
         }
-
     }
-
 
 
     @Test
