@@ -56,8 +56,12 @@ public class ServicioCrearPeliculaTest {
             Pelicula pelicula= new PeliculaTestDataBuilder().build();
 
             Mockito.when(repositorioPelicula.existe(Mockito.any())).thenReturn(false);
+        try {
             servicioCrearPelicula.ejecutar(pelicula);
-            
+        }catch (ExcepcionExistenciaPelicula e){
+            Assertions.fail(e.getMessage());
+        }
+
     }
 
 
