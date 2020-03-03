@@ -8,12 +8,6 @@ import com.ceiba.cinemax.dominio.modelo.SalaCine;
 import com.ceiba.cinemax.dominio.puerto.repositorio.RepositorioPelicula;
 import com.ceiba.cinemax.dominio.puerto.repositorio.RepositorioReserva;
 import com.ceiba.cinemax.dominio.puerto.repositorio.RepositorioSalaCine;
-import com.ceiba.cinemax.infraestructura.adaptador.repositorio.RepositorioPeliculaPostgreSql;
-import com.ceiba.cinemax.infraestructura.adaptador.repositorio.RepositorioReservaPostgreSql;
-import com.ceiba.cinemax.infraestructura.adaptador.repositorio.RepositorioSalaCinePostgreSql;
-import com.ceiba.cinemax.infraestructura.repositoriojpa.RepositorioPeliculaJpa;
-import com.ceiba.cinemax.infraestructura.repositoriojpa.RepositorioReservaJpa;
-import com.ceiba.cinemax.infraestructura.repositoriojpa.RepositorioSalaCineJpa;
 import com.ceiba.cinemax.testdatabuilder.aplicacion.ComandoReservaTestDataBuilder;
 import com.ceiba.cinemax.testdatabuilder.dominio.modelo.FacturaTestDataBuilder;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -46,7 +40,6 @@ public class ControladorReservaTest {
     @Autowired
     private ObjectMapper objectMapper;
 
-
     @Autowired
     private RepositorioPelicula repositorioPelicula;
 
@@ -70,7 +63,7 @@ public class ControladorReservaTest {
         Pelicula pelicula = new Pelicula("Transformers", salaCine, "1");
         repositorioPelicula.guardar(pelicula);
 
-        mockMvc.perform(post("http://localhost:8080/reserva")
+        mockMvc.perform(post("http://localhost:4567/reserva")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(comandoReserva))
                 .accept(MediaType.APPLICATION_JSON))
@@ -81,9 +74,6 @@ public class ControladorReservaTest {
 
     @Test
     public void listarReservaTest() throws Exception {
-
-
-
 
         SalaCine salaCine1 = new SalaCine("1", 200, true);
         repositorioSalaCine.guardar(salaCine1);
@@ -96,8 +86,7 @@ public class ControladorReservaTest {
         repositorioReserva.guardar(reserva);
 
 
-
-        mockMvc.perform(get("http://localhost:8080/reserva")
+        mockMvc.perform(get("http://localhost:4567/reserva")
                 .contentType(MediaType.APPLICATION_JSON)
                 ).andDo(print()).andExpect(status().isOk())
 

@@ -4,8 +4,6 @@ import com.ceiba.cinemax.CinemaxApplication;
 import com.ceiba.cinemax.aplicacion.comando.ComandoSalaCine;
 import com.ceiba.cinemax.dominio.modelo.SalaCine;
 import com.ceiba.cinemax.dominio.puerto.repositorio.RepositorioSalaCine;
-import com.ceiba.cinemax.infraestructura.adaptador.repositorio.RepositorioSalaCinePostgreSql;
-import com.ceiba.cinemax.infraestructura.repositoriojpa.RepositorioSalaCineJpa;
 import com.ceiba.cinemax.testdatabuilder.aplicacion.ComandoSalaCineTestDataBuilder;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
@@ -15,7 +13,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.web.context.WebApplicationContext;
-import java.util.ArrayList;
+
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
@@ -33,8 +31,6 @@ public class ControladorSalaCineTest {
 
     @Autowired
     private ObjectMapper objectMapper;
-
-
 
     @Autowired
     private RepositorioSalaCine repositorioSalaCine;
@@ -60,18 +56,11 @@ public class ControladorSalaCineTest {
     @Test
     public void listarSalaCineList()throws Exception{
 
-
-
         SalaCine primeraSalaCine= new SalaCine("123453",200,true);
         repositorioSalaCine.guardar(primeraSalaCine);
 
-
-        ArrayList<SalaCine> salaCines = new ArrayList<>();
-        salaCines.add(primeraSalaCine);
-
         mockMvc.perform(get("http://localhost:4567/salacine")
-                .contentType(MediaType.APPLICATION_JSON)
-        )
+                .contentType(MediaType.APPLICATION_JSON))
                 .andDo(print()).andExpect(status().isOk())
                 .andExpect(jsonPath("[0].numeroSalaCine").value("123453"))
                 .andExpect(jsonPath("[0].capacidadSillas").value(200))

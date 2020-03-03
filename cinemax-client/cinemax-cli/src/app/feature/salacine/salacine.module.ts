@@ -5,7 +5,7 @@ import { CrearsalacineComponent } from './components/crearsalacine/crearsalacine
 
 import { FormsModule } from '@angular/forms';
 import { SharedModule } from 'src/app/shared/shared.module';
-import { SalacineService } from '../../shared/services/salacine.service';
+
 
 
 
@@ -21,6 +21,6 @@ import { SalacineService } from '../../shared/services/salacine.service';
     FormsModule,
     SharedModule
   ],
-  providers: [SalacineService]
+  
 })
 export class SalacineModule { }

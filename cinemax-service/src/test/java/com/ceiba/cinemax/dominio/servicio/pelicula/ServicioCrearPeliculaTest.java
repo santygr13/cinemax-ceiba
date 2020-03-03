@@ -1,6 +1,7 @@
 package com.ceiba.cinemax.dominio.servicio.pelicula;
 
 import com.ceiba.cinemax.dominio.excepcion.ExcepcionDuplicidad;
+import com.ceiba.cinemax.dominio.excepcion.ExcepcionExistenciaPelicula;
 import com.ceiba.cinemax.dominio.excepcion.ExcepcionExistenciaSalaCine;
 import com.ceiba.cinemax.dominio.modelo.Pelicula;
 import com.ceiba.cinemax.dominio.puerto.repositorio.RepositorioPelicula;
@@ -18,7 +19,7 @@ public class ServicioCrearPeliculaTest {
 
     private static final String LA_PELICULA_YA_EXISTE="La pelicula ya se encuentra registrada";
     private static final String LA_SALA_CINE_NO_EXISTE="la sala de cine no existe";
-
+    private static final String LA_PELICULA_NO_EXISTE="La pelicula no existe";
 
     ServicioCrearPelicula servicioCrearPelicula;
     RepositorioSalaCine repositorioSalaCine;
@@ -48,6 +49,18 @@ public class ServicioCrearPeliculaTest {
             Assertions.assertEquals(LA_PELICULA_YA_EXISTE,e.getMessage());
         }
     }
+
+    @Test
+    public void validarNoExistenciaDePeliculaTest(){
+
+            Pelicula pelicula= new PeliculaTestDataBuilder().build();
+
+            Mockito.when(repositorioPelicula.existe(Mockito.any())).thenReturn(false);
+            servicioCrearPelicula.ejecutar(pelicula);
+            
+    }
+
+
 
     @Test
     public void validarNoExistenciaSalaCineTest(){

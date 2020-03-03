@@ -5,10 +5,6 @@ import com.ceiba.cinemax.dominio.modelo.Pelicula;
 import com.ceiba.cinemax.dominio.modelo.SalaCine;
 import com.ceiba.cinemax.dominio.puerto.repositorio.RepositorioPelicula;
 import com.ceiba.cinemax.dominio.puerto.repositorio.RepositorioSalaCine;
-import com.ceiba.cinemax.infraestructura.adaptador.repositorio.RepositorioPeliculaPostgreSql;
-import com.ceiba.cinemax.infraestructura.adaptador.repositorio.RepositorioSalaCinePostgreSql;
-import com.ceiba.cinemax.infraestructura.repositoriojpa.RepositorioPeliculaJpa;
-import com.ceiba.cinemax.infraestructura.repositoriojpa.RepositorioSalaCineJpa;
 import com.ceiba.cinemax.testdatabuilder.aplicacion.ComandoPeliculaTestDataBuilder;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
@@ -19,7 +15,6 @@ import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.web.context.WebApplicationContext;
 import javax.transaction.Transactional;
-import java.util.ArrayList;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
@@ -38,8 +33,6 @@ public class ControladorPeliculaTest {
 
     @Autowired
     private ObjectMapper objectMapper;
-
-
 
     @Autowired
     private RepositorioPelicula repositorioPelicula;
@@ -60,7 +53,7 @@ public class ControladorPeliculaTest {
 
         repositorioSalaCine.guardar(comandoPelicula.getSalaCine());
 
-        mockMvc.perform(post("http://localhost:8080/pelicula")
+        mockMvc.perform(post("http://localhost:4567/pelicula")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(comandoPelicula))
                 .accept(MediaType.APPLICATION_JSON))
@@ -74,7 +67,7 @@ public class ControladorPeliculaTest {
 
         ComandoPelicula comandoPelicula= new ComandoPeliculaTestDataBuilder().build();
 
-        mockMvc.perform(post("http://localhost:8080/pelicula")
+        mockMvc.perform(post("http://localhost:4567/pelicula")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(comandoPelicula))
                 .accept(MediaType.APPLICATION_JSON))
@@ -94,12 +87,9 @@ public class ControladorPeliculaTest {
         Pelicula primeraPelicula= new Pelicula("transformers",salaCine1,"1");
         repositorioPelicula.guardar(primeraPelicula);
 
-        ArrayList<Pelicula> peliculas = new ArrayList<>();
-        peliculas.add(primeraPelicula);
 
-        mockMvc.perform(get("http://localhost:8080/pelicula")
-                .contentType(MediaType.APPLICATION_JSON)
-                .content(objectMapper.writeValueAsString(peliculas)))
+        mockMvc.perform(get("http://localhost:4567/pelicula")
+                .contentType(MediaType.APPLICATION_JSON))
                 .andDo(print()).andExpect(status().isOk())
 
                 .andExpect(jsonPath("[0].nombre").value("transformers"))

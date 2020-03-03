@@ -42,8 +42,7 @@ public class ServicioCrearSalaCineTest {
     @Test
     public void cambiarEstadoSalaCineTest(){
 
-        SalaCine salaCine= new SalaCineTestDataBuilder().build();
-        salaCine.setEstadoSalaCine(false);
+        SalaCine salaCine= new SalaCineTestDataBuilder().conEstadoSalaCine(false).build();
 
         Mockito.when(repositorioSalaCine
                 .filtrarSalaCinePorNumeroSalaCinePeliculaEnPelicula(Mockito.any()))

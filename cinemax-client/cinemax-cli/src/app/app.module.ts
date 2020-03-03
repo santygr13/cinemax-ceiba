@@ -27,7 +27,7 @@ import { HttpErrorInterceptor } from './http-error.interceptor';
     SharedModule
 
   ],
-  providers: [PeliculaService,SalacineService,{provide: HTTP_INTERCEPTORS,
+  providers: [{provide: HTTP_INTERCEPTORS,
     useClass: HttpErrorInterceptor,
     multi: true}],
   bootstrap: [AppComponent]
