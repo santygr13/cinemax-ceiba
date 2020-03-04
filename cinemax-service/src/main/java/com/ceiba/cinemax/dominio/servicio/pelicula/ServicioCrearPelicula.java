@@ -27,8 +27,8 @@ public class ServicioCrearPelicula {
     }
 
 
-    public void validarExistenciaPelicula(Pelicula pelicula){
-        boolean existe = this.repositorioPelicula.existe(pelicula);
+    public void validarExistenciaPelicula(String nombre){
+        boolean existe = this.repositorioPelicula.existe(nombre);
         if (existe){
             throw new ExcepcionDuplicidad(LA_PELICULA_YA_EXISTE);
         }
@@ -44,7 +44,7 @@ public class ServicioCrearPelicula {
 
     public void ejecutar(Pelicula pelicula){
 
-        this.validarExistenciaPelicula(pelicula);
+        this.validarExistenciaPelicula(pelicula.getNombre());
         this.validarExistenciaSalaCine(pelicula);
         SalaCine salaCine= repositorioSalaCine.filtrarSalaCinePorNumeroSalaCinePeliculaEnPelicula(pelicula.getNumeroSalaCine());
         pelicula.setSalaCine(salaCine);

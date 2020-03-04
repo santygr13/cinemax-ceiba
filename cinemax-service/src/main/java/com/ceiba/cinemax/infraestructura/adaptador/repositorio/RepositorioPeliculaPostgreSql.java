@@ -25,16 +25,11 @@ public class RepositorioPeliculaPostgreSql implements RepositorioPelicula {
 
 
     @Override
-    public boolean existe(Pelicula pelicula) {
-        String nombre = pelicula.getNombre();
+    public boolean existe(String nombre) {
         return (repositorioPeliculaJpa.filtroPorNombrePelicula(nombre)) !=null;
     }
 
-    @Override
-    public boolean noExiste(String nombre) {
 
-        return (repositorioPeliculaJpa.filtroPorNombrePelicula(nombre)) ==null;
-    }
 
 
     @Override

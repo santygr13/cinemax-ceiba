@@ -8,8 +8,8 @@ import java.util.List;
 public interface RepositorioPelicula {
 
 
-    boolean existe(Pelicula pelicula);
+    boolean existe(String nombre);
     void guardar(Pelicula pelicula);
     List<PeliculaDto> listar();
-    boolean noExiste(String nombre);
+
 }

@@ -50,19 +50,6 @@ public class ServicioCrearPeliculaTest {
         }
     }
 
-    @Test
-    public void validarNoExistenciaDePeliculaTest(){
-
-
-            Pelicula pelicula= new PeliculaTestDataBuilder().build();
-
-            Mockito.when(repositorioPelicula.existe(Mockito.any())).thenReturn(false);
-            servicioCrearPelicula.ejecutar(pelicula);
-
-            Assertions.fail();
-
-    }
-
 
 
     @Test

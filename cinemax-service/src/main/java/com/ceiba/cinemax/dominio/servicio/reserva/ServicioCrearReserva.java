@@ -27,11 +27,12 @@ public class ServicioCrearReserva {
     }
 
     private void validarExistenciaPelicula(String nombre){
-        boolean existe = this.repositorioPelicula.noExiste(nombre);
-        if (existe){
+        boolean existe = this.repositorioPelicula.existe(nombre);
+        if (!existe){
             throw new ExcepcionExistenciaPelicula(LA_PELICULA_NO_EXISTE);
         }
     }
+
 
     public void ejecutar(Reserva reserva){
 

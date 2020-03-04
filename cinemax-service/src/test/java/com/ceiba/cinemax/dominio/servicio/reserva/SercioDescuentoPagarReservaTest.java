@@ -71,7 +71,7 @@ public class SercioDescuentoPagarReservaTest {
     public void validarNoExistenciaDePeliculaTest(){
         try {
 
-            Mockito.when(repositorioPelicula.noExiste(Mockito.any())).thenReturn(true);
+            Mockito.when(repositorioPelicula.existe(Mockito.any())).thenReturn(false);
             servicioCrearReserva.ejecutar(new ReservaTestDataBuilder().build());
 
             Assertions.fail();
@@ -86,7 +86,7 @@ public class SercioDescuentoPagarReservaTest {
 
         Reserva reserva= new ReservaTestDataBuilder().build();
 
-        Mockito.when(repositorioPelicula.noExiste(Mockito.any())).thenReturn(false);
+        Mockito.when(repositorioPelicula.existe(Mockito.any())).thenReturn(true);
         Mockito.doNothing().when(servicioCapacidadSalaCine).reducirCapacidadSalaCine(Mockito.anyString(),Mockito.any(int.class));
         Mockito.when(servicioCrearFactura.construirFactura(reserva)).thenReturn(new FacturaTestDataBuilder().build());
 
