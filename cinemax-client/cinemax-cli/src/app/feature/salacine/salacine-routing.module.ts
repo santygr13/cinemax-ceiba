@@ -4,7 +4,7 @@ import { CrearsalacineComponent } from './components/crearsalacine/crearsalacine
 
 
 const routes: Routes = [
-  {path:'salacine',component:CrearsalacineComponent}
+  {path:'',component:CrearsalacineComponent}
 ]
 
 @NgModule({

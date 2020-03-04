@@ -9,6 +9,7 @@ import { SharedModule } from './shared/shared.module';
 import { PeliculaService } from './shared/services/pelicula.service';
 import { SalacineService } from './shared/services/salacine.service';
 import { HttpErrorInterceptor } from './http-error.interceptor';
+import { CoreModule } from './core/core.module';
 
 
 
@@ -24,7 +25,7 @@ import { HttpErrorInterceptor } from './http-error.interceptor';
     FormsModule,
     HttpClientModule,
     CommonModule,
-    SharedModule
+    CoreModule
 
   ],
   providers: [{provide: HTTP_INTERCEPTORS,

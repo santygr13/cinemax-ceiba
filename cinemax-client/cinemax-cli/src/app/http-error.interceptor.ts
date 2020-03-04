@@ -21,10 +21,12 @@ export class HttpErrorInterceptor implements HttpInterceptor {
         if (request.method !== 'GET') {
             headers.append('Content-Type', 'application/json');
         }
-        
-        
-        const modified= request.clone({
-           headers:headers
+        else {
+            headers.append('Accept', 'application/json')
+        }
+
+        const modified = request.clone({
+            headers: headers
         })
 
         return next.handle(modified)
@@ -55,7 +57,7 @@ export class HttpErrorInterceptor implements HttpInterceptor {
                         });
                     }
 
-                    
+
                     return throwError(errorMessage);
                 })
             )

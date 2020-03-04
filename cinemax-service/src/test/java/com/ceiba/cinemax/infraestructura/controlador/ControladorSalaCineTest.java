@@ -14,6 +14,9 @@ import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.web.context.WebApplicationContext;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
@@ -52,21 +55,21 @@ public class ControladorSalaCineTest {
     }
 
 
-
     @Test
     public void listarSalaCineList()throws Exception{
 
         SalaCine primeraSalaCine= new SalaCine("123453",200,true);
         repositorioSalaCine.guardar(primeraSalaCine);
 
+        List<SalaCine> salaCines = new ArrayList<>();
+        salaCines.add(primeraSalaCine);
+
         mockMvc.perform(get("http://localhost:4567/salacine")
-                .contentType(MediaType.APPLICATION_JSON))
+                .contentType(MediaType.APPLICATION_JSON).content(objectMapper.writeValueAsString(salaCines)))
                 .andDo(print()).andExpect(status().isOk())
                 .andExpect(jsonPath("[0].numeroSalaCine").value("123453"))
                 .andExpect(jsonPath("[0].capacidadSillas").value(200))
                 .andExpect(jsonPath("[0].estadoSalaCine").value(true));
     }
-
-
 
 }

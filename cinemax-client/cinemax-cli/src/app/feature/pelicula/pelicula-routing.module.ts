@@ -5,7 +5,7 @@ import { ListarPeliculaComponent } from './components/listar-pelicula/listar-pel
 
 
 const routes: Routes = [
-  { path: 'pelicula', component: CrearPeliculaComponent },
+  { path: '', component: CrearPeliculaComponent },
   { path: 'listaPelicula', component: ListarPeliculaComponent }
 ];
 @NgModule({

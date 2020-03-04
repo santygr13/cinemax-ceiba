@@ -20,6 +20,8 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.web.context.WebApplicationContext;
 import javax.transaction.Transactional;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
@@ -86,17 +88,18 @@ public class ControladorReservaTest {
         repositorioReserva.guardar(reserva);
 
 
+        List<Reserva> reservas = new ArrayList<>();
+        reservas.add(reserva);
+
         mockMvc.perform(get("http://localhost:4567/reserva")
                 .contentType(MediaType.APPLICATION_JSON)
-                ).andDo(print()).andExpect(status().isOk())
-
-
+                .content(objectMapper.writeValueAsString(reservas)))
+                .andDo(print()).andExpect(status().isOk())
                 .andExpect(jsonPath("[0].fechaReservaPelicula").value(LocalDate.of(2020, 03, 27).toString()))
                 .andExpect(jsonPath("[0].documentoCliente").value(1037854939))
                 .andExpect(jsonPath("[0].nombreCliente").value("Santiago"))
                 .andExpect(jsonPath("[0].cantidadPuestos").value(3))
                 .andExpect(jsonPath("[0].nombrePelicula").value("transformers"));
-
 
     }
 }

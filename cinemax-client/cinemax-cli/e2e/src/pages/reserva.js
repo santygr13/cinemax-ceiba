@@ -11,7 +11,7 @@ module.exports = {
 
   goReserva: function () {
     browser.get('http://localhost:4200/reserva')
-
+    
   },
 
   goListaReserva: function(){

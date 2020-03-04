@@ -53,15 +53,16 @@ public class ServicioCrearPeliculaTest {
     @Test
     public void validarNoExistenciaDePeliculaTest(){
 
+
             Pelicula pelicula= new PeliculaTestDataBuilder().build();
 
             Mockito.when(repositorioPelicula.existe(Mockito.any())).thenReturn(false);
-        try {
             servicioCrearPelicula.ejecutar(pelicula);
-        }catch (ExcepcionExistenciaPelicula e){
-            Assertions.assertEquals(LA_PELICULA_NO_EXISTE,e.getMessage());
-        }
+
+            Assertions.fail();
+
     }
+
 
 
     @Test

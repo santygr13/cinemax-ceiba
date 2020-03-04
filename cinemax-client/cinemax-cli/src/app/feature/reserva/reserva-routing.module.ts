@@ -5,7 +5,7 @@ import { ListarReservaComponent } from './components/listar-reserva/listar-reser
 
 
 const routes: Routes = [
-  { path: 'reserva', component: CrearReservaComponent },
+  { path: '', component: CrearReservaComponent },
   { path: 'listaReserva', component: ListarReservaComponent }
 ]
 

@@ -16,6 +16,9 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.web.context.WebApplicationContext;
 import javax.transaction.Transactional;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
@@ -88,8 +91,12 @@ public class ControladorPeliculaTest {
         repositorioPelicula.guardar(primeraPelicula);
 
 
+        List<Pelicula> peliculas = new ArrayList<>();
+        peliculas.add(primeraPelicula);
+
         mockMvc.perform(get("http://localhost:4567/pelicula")
-                .contentType(MediaType.APPLICATION_JSON))
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(objectMapper.writeValueAsString(peliculas)))
                 .andDo(print()).andExpect(status().isOk())
 
                 .andExpect(jsonPath("[0].nombre").value("transformers"))
