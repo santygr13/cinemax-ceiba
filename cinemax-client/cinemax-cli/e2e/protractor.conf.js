@@ -9,7 +9,7 @@ exports.config = {
 
   framework: 'jasmine',
   seleniumAddress: 'http://localhost:4444/wd/hub',
-  specs: ['principaltest.js','salacinetest.js','peliculatest.js','reservatest.js'],
+  specs: ['src/pages/principaltest.ts','src/pages/salacinetest.ts','src/pages/peliculatest.ts','src/pages/reservatest.ts'],
   capabilities: {
     browserName: "firefox"
   },

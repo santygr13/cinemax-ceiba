@@ -4,32 +4,17 @@ import {
     HttpHandler,
     HttpRequest,
     HttpErrorResponse,
-    HttpHeaders,
-
 } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { retry, catchError } from 'rxjs/operators';
 import Swal from 'sweetalert2';
 
-
 export class HttpErrorInterceptor implements HttpInterceptor {
 
     intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
 
-        let headers = new HttpHeaders();
-
-        if (request.method !== 'GET') {
-            headers.append('Content-Type', 'application/json');
-        }
-        else {
-            headers.append('Accept', 'application/json')
-        }
         
-        const modified = request.clone({
-            headers: headers
-        })
-
-        return next.handle(modified)
+        return next.handle(request)
             .pipe(
                 retry(1),
                 catchError((error: HttpErrorResponse) => {
@@ -56,7 +41,6 @@ export class HttpErrorInterceptor implements HttpInterceptor {
                             showConfirmButton: true
                         });
                     }
-
 
                     return throwError(errorMessage);
                 })

@@ -7,7 +7,7 @@ import { CommonModule } from '@angular/common';
 import { AppComponent } from './app.component';
 import { HttpErrorInterceptor } from './http-error.interceptor';
 import { CoreModule } from './core/core.module';
-
+import { HeaderInterceptor } from './headers.interceptor'
 
 
 @NgModule({
@@ -16,7 +16,7 @@ import { CoreModule } from './core/core.module';
 
   ],
   imports: [
-    
+
     BrowserModule,
     AppRoutingModule,
     FormsModule,
@@ -25,9 +25,15 @@ import { CoreModule } from './core/core.module';
     CoreModule
 
   ],
-  providers: [{provide: HTTP_INTERCEPTORS,
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
     useClass: HttpErrorInterceptor,
-    multi: true}],
+    multi: true
+  },{
+    provide: HTTP_INTERCEPTORS,
+    useClass: HeaderInterceptor,
+    multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

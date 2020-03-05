@@ -1,42 +1,30 @@
 import { element, by } from 'protractor';
 
-var pelicula = {
-    nombre: element(by.id('inputnombre')),
-    numeroSalaCine: element(by.id('listaOpciones'))
-};
-module.exports = {
+export class Pelicula {
+
+    pelicula = {
+        nombre: element(by.id('inputnombre')),
+        numeroSalaCine: element(by.id('listaOpciones'))
+    }
 
     setNombre(name: string) {
-        this.nombre.sendKeys(name);
-    },
+        this.pelicula.nombre.sendKeys(name);
+    }
 
-    setNumeroSalaCine: function () {
-        this.numeroSalaCine.$('[value="0: 1"]').click()
-    },
+    setNumeroSalaCine(){
+        this.pelicula.numeroSalaCine.$('[value="0: 1"]').click()
+    }
 
-    delay(ms: number) {
-        return new Promise(resolve => setTimeout(resolve, ms));
-    },
+    goPelicula(){
 
-    Sleep: async function () {
-        
-        await this.delay(3000)
-    },
-
-    crear: function () {
-        document.getElementById('crear').click();
-    },
-
-    goPelicula: function () {
-        document.getElementById('crear-pelicula').click()
-    },
-
-    goListaPelicula: function () {
-        document.getElementById('listar-pelicula').click()
-    },
-
+        element(by.id('crear-pelicula')).click()
+    }
     
+    crearPelicula(){
+        element(by.buttonText('Crear')).click();
+    }
 
-
-
-};
+    goListaPelicula(){
+        element(by.id('listar-pelicula')).click() 
+    }
+}
