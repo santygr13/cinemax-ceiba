@@ -2,6 +2,7 @@ package com.ceiba.cinemax.infraestructura.controlador;
 import com.ceiba.cinemax.CinemaxApplication;
 import com.ceiba.cinemax.aplicacion.comando.ComandoReserva;
 
+import com.ceiba.cinemax.aplicacion.comando.ComandoSalaCine;
 import com.ceiba.cinemax.dominio.modelo.Pelicula;
 import com.ceiba.cinemax.dominio.modelo.Reserva;
 import com.ceiba.cinemax.dominio.modelo.SalaCine;
@@ -9,7 +10,11 @@ import com.ceiba.cinemax.dominio.puerto.repositorio.RepositorioPelicula;
 import com.ceiba.cinemax.dominio.puerto.repositorio.RepositorioReserva;
 import com.ceiba.cinemax.dominio.puerto.repositorio.RepositorioSalaCine;
 import com.ceiba.cinemax.testdatabuilder.aplicacion.ComandoReservaTestDataBuilder;
+import com.ceiba.cinemax.testdatabuilder.aplicacion.ComandoSalaCineTestDataBuilder;
 import com.ceiba.cinemax.testdatabuilder.dominio.modelo.FacturaTestDataBuilder;
+import com.ceiba.cinemax.testdatabuilder.dominio.modelo.PeliculaTestDataBuilder;
+import com.ceiba.cinemax.testdatabuilder.dominio.modelo.ReservaTestDataBuilder;
+import com.ceiba.cinemax.testdatabuilder.dominio.modelo.SalaCineTestDataBuilder;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -59,10 +64,10 @@ public class ControladorReservaTest {
 
         ComandoReserva comandoReserva = new ComandoReservaTestDataBuilder().build();
 
-        SalaCine salaCine = new SalaCine("1", 300, true);
+        SalaCine salaCine = new SalaCineTestDataBuilder().build();
         repositorioSalaCine.guardar(salaCine);
 
-        Pelicula pelicula = new Pelicula("Transformers", salaCine, "1");
+        Pelicula pelicula = new PeliculaTestDataBuilder().build();
         repositorioPelicula.guardar(pelicula);
 
         mockMvc.perform(post("http://localhost:4567/reserva")
@@ -77,16 +82,9 @@ public class ControladorReservaTest {
     @Test
     public void listarReservaTest() throws Exception {
 
-        SalaCine salaCine1 = new SalaCine("1", 200, true);
-        repositorioSalaCine.guardar(salaCine1);
 
-        Pelicula primeraPelicula = new Pelicula("transformers", salaCine1, salaCine1.getNumeroSalaCine());
-        repositorioPelicula.guardar(primeraPelicula);
-
-
-        Reserva reserva = new Reserva(1L, LocalDate.of(2020, 03, 27), 1037854939, "Santiago", 3, primeraPelicula.getNombre(), new FacturaTestDataBuilder().build());
+        Reserva reserva = new ReservaTestDataBuilder().build();
         repositorioReserva.guardar(reserva);
-
 
         List<Reserva> reservas = new ArrayList<>();
         reservas.add(reserva);
@@ -95,11 +93,11 @@ public class ControladorReservaTest {
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(reservas)))
                 .andDo(print()).andExpect(status().isOk())
-                .andExpect(jsonPath("[0].fechaReservaPelicula").value(LocalDate.of(2020, 03, 27).toString()))
+                .andExpect(jsonPath("[0].fechaReservaPelicula").value(LocalDate.of(2020, 03, 28).toString()))
                 .andExpect(jsonPath("[0].documentoCliente").value(1037854939))
                 .andExpect(jsonPath("[0].nombreCliente").value("Santiago"))
                 .andExpect(jsonPath("[0].cantidadPuestos").value(3))
-                .andExpect(jsonPath("[0].nombrePelicula").value("transformers"));
+                .andExpect(jsonPath("[0].nombrePelicula").value("Transformers"));
 
     }
 }

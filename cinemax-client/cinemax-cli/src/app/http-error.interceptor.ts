@@ -24,7 +24,7 @@ export class HttpErrorInterceptor implements HttpInterceptor {
         else {
             headers.append('Accept', 'application/json')
         }
-
+        
         const modified = request.clone({
             headers: headers
         })

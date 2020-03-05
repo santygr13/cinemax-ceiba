@@ -6,6 +6,8 @@ import com.ceiba.cinemax.dominio.modelo.SalaCine;
 import com.ceiba.cinemax.dominio.puerto.repositorio.RepositorioPelicula;
 import com.ceiba.cinemax.dominio.puerto.repositorio.RepositorioSalaCine;
 import com.ceiba.cinemax.testdatabuilder.aplicacion.ComandoPeliculaTestDataBuilder;
+import com.ceiba.cinemax.testdatabuilder.dominio.modelo.PeliculaTestDataBuilder;
+import com.ceiba.cinemax.testdatabuilder.dominio.modelo.SalaCineTestDataBuilder;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -53,7 +55,6 @@ public class ControladorPeliculaTest {
 
 
         ComandoPelicula comandoPelicula= new ComandoPeliculaTestDataBuilder().build();
-
         repositorioSalaCine.guardar(comandoPelicula.getSalaCine());
 
         mockMvc.perform(post("http://localhost:4567/pelicula")
@@ -82,14 +83,11 @@ public class ControladorPeliculaTest {
     @Test
     public void listarPeliculaTest() throws Exception{
 
-
-
-        SalaCine salaCine1= new SalaCine("1",200,true);
+        SalaCine salaCine1= new SalaCineTestDataBuilder().build();
         repositorioSalaCine.guardar(salaCine1);
 
-        Pelicula primeraPelicula= new Pelicula("transformers",salaCine1,"1");
+        Pelicula primeraPelicula= new PeliculaTestDataBuilder().build();
         repositorioPelicula.guardar(primeraPelicula);
-
 
         List<Pelicula> peliculas = new ArrayList<>();
         peliculas.add(primeraPelicula);
@@ -99,9 +97,9 @@ public class ControladorPeliculaTest {
                 .content(objectMapper.writeValueAsString(peliculas)))
                 .andDo(print()).andExpect(status().isOk())
 
-                .andExpect(jsonPath("[0].nombre").value("transformers"))
-                .andExpect(jsonPath("[0].salaCine.numeroSalaCine").value("1"))
-                .andExpect(jsonPath("[0].salaCine.capacidadSillas").value(200))
+                .andExpect(jsonPath("[0].nombre").value("Transformers"))
+                .andExpect(jsonPath("[0].salaCine.numeroSalaCine").value("3"))
+                .andExpect(jsonPath("[0].salaCine.capacidadSillas").value(300))
                 .andExpect(jsonPath("[0].salaCine.estadoSalaCine").value(true))
                 .andExpect(jsonPath("[0].numeroSalaCine").value("1"));
     }

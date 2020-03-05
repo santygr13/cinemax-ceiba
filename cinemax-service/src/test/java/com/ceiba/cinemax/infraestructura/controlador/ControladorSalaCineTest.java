@@ -5,6 +5,7 @@ import com.ceiba.cinemax.aplicacion.comando.ComandoSalaCine;
 import com.ceiba.cinemax.dominio.modelo.SalaCine;
 import com.ceiba.cinemax.dominio.puerto.repositorio.RepositorioSalaCine;
 import com.ceiba.cinemax.testdatabuilder.aplicacion.ComandoSalaCineTestDataBuilder;
+import com.ceiba.cinemax.testdatabuilder.dominio.modelo.SalaCineTestDataBuilder;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,6 +45,7 @@ public class ControladorSalaCineTest {
 
     @Test
     public void crearSalaCine() throws Exception{
+
         ComandoSalaCine comandoSalaCine= new ComandoSalaCineTestDataBuilder().build();
 
         mockMvc.perform(post("http://localhost:4567/salacine")
@@ -58,7 +60,7 @@ public class ControladorSalaCineTest {
     @Test
     public void listarSalaCineList()throws Exception{
 
-        SalaCine primeraSalaCine= new SalaCine("123453",200,true);
+        SalaCine primeraSalaCine= new SalaCineTestDataBuilder().build();
         repositorioSalaCine.guardar(primeraSalaCine);
 
         List<SalaCine> salaCines = new ArrayList<>();
@@ -67,8 +69,8 @@ public class ControladorSalaCineTest {
         mockMvc.perform(get("http://localhost:4567/salacine")
                 .contentType(MediaType.APPLICATION_JSON).content(objectMapper.writeValueAsString(salaCines)))
                 .andDo(print()).andExpect(status().isOk())
-                .andExpect(jsonPath("[0].numeroSalaCine").value("123453"))
-                .andExpect(jsonPath("[0].capacidadSillas").value(200))
+                .andExpect(jsonPath("[0].numeroSalaCine").value("3"))
+                .andExpect(jsonPath("[0].capacidadSillas").value(300))
                 .andExpect(jsonPath("[0].estadoSalaCine").value(true));
     }
 

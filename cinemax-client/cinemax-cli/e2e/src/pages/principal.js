@@ -8,6 +8,7 @@ module.exports = {
 
     Sleep: function () {
         browser.sleep(3000)
+        
     }
 
 };
