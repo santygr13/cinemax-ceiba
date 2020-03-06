@@ -1,6 +1,6 @@
 import { Pelicula } from "./pelicula"
 import { Principal } from './principal';
-import { browser } from 'protractor';
+
 
 describe('Pagina principal pelicula', function () {
 
@@ -12,19 +12,20 @@ describe('Pagina principal pelicula', function () {
         principal = new Principal()
     })
 
-    it('Crear pelicula', function () {
-        principal.goPrincipal()
-        pelicula.goPelicula()
+    it('Crear pelicula', async function () {
+        await principal.goPrincipal()
+        await pelicula.goPelicula()
         pelicula.setNombre('joker')
         pelicula.setNumeroSalaCine()
-        browser.sleep(5000)
-        pelicula.crearPelicula()
+        await pelicula.crearPelicula()
+        pelicula.sweetAlert()
+        expect(pelicula.elementoTitle().getText()).toContain('Registro Exitoso')
     })
 
-    it('listar pelicula', function () {
-        principal.goPrincipal()
-        pelicula.goListaPelicula()
-        browser.sleep(5000)
+    it('listar pelicula', async function () {
+        await principal.goPrincipal()
+        await pelicula.goListaPelicula()
+
     })
-    
+
 })

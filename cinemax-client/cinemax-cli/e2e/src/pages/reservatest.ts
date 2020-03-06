@@ -1,6 +1,6 @@
 import { Principal } from "./principal";
 import { Reserva } from './reserva';
-import { browser } from 'protractor';
+
 
 describe('Pagina principal reserva', function () {
 
@@ -12,23 +12,24 @@ describe('Pagina principal reserva', function () {
         principal = new Principal()
     })
 
-    it('Crear Reserva', async  function () {
-        principal.goPrincipal()
-        reserva.goReserva()
+    it('Crear Reserva', async function () {
+        await principal.goPrincipal()
+        await reserva.goReserva()
         reserva.setNombreCliente('santiago')
         reserva.setDocumentoCliente(10369263)
         reserva.setCantidadPuestos(5)
         reserva.setNombrePelicula()
         reserva.setFechaReservaPelicula('2020-03-27')
-        reserva.crearReserva()
-        
+        await reserva.crearReserva()
+        reserva.sweetAlert()
+        expect(reserva.elementoTitle().getText()).toContain('Reserva Exitosa')
 
     })
 
-    it('listar Reserva', function () {
-        principal.goPrincipal()
-        reserva.goListaReserva()
-        browser.sleep(5000)
+    it('listar Reserva', async function () {
+        await principal.goPrincipal()
+        await reserva.goListaReserva()
+
     })
 
 })

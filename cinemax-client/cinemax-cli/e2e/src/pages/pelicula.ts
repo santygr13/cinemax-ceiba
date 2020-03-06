@@ -1,5 +1,6 @@
-import { element, by } from 'protractor';
+import { element, by, browser, protractor } from 'protractor';
 
+var EC = protractor.ExpectedConditions;
 export class Pelicula {
 
     pelicula = {
@@ -11,20 +12,29 @@ export class Pelicula {
         this.pelicula.nombre.sendKeys(name);
     }
 
-    setNumeroSalaCine(){
+    setNumeroSalaCine() {
         this.pelicula.numeroSalaCine.$('[value="0: 1"]').click()
     }
 
-    goPelicula(){
+    goPelicula() {
 
-        element(by.id('crear-pelicula')).click()
-    }
-    
-    crearPelicula(){
-        element(by.buttonText('Crear')).click();
+        return element(by.id('crear-pelicula')).click()
     }
 
-    goListaPelicula(){
-        element(by.id('listar-pelicula')).click() 
+    crearPelicula() {
+        return element(by.buttonText('Crear')).click();
+    }
+
+    goListaPelicula() {
+        return element(by.id('listar-pelicula')).click()
+    }
+
+
+    elementoTitle() {
+        return element(by.id('swal2-title'))
+    }
+
+    sweetAlert() {
+        browser.wait(EC.presenceOf(element(by.id('swal2-title'))))
     }
 }

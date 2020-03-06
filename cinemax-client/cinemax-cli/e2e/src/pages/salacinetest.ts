@@ -1,6 +1,6 @@
 import { SalaCine } from "./salacine";
 import { Principal } from './principal';
-import { browser } from 'protractor';
+
 
 describe('Pagina principal SalaCine', function () {
 
@@ -10,20 +10,21 @@ describe('Pagina principal SalaCine', function () {
 
     beforeEach(() => {
         salacine = new SalaCine();
-        principal= new Principal()
+        principal = new Principal()
     })
 
-    it('Crear SalaCine',  function () {
-        
-        principal.goPrincipal()
+    it('Crear SalaCine', async function () {
+
+        await principal.goPrincipal()
         salacine.goSalaCine()
         salacine.setNumeroSalaCine('1')
         salacine.setCapacidadSillas(20000)
         salacine.setEstadoSalaCine()
-        browser.sleep(5000)
-        salacine.crearSalaCine()
-       
+        await salacine.crearSalaCine()
+        salacine.sweetAlert()
+        expect(salacine.elementoTitle().getText()).toContain('Registro Exitoso')
     })
 
+    
 
 })

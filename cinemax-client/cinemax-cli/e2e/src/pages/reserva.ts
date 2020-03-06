@@ -1,5 +1,6 @@
-import { element, by } from 'protractor';
+import { element, by, protractor, browser } from 'protractor';
 
+var EC = protractor.ExpectedConditions;
 export class Reserva {
 
     reserva = {
@@ -31,15 +32,23 @@ export class Reserva {
     }
 
     crearReserva() {
-        element(by.buttonText('Crear')).click();
+        return element(by.buttonText('Crear')).click();
     }
 
     goReserva() {
-        element(by.id('crear-reserva')).click()
+        return element(by.id('crear-reserva')).click()
     }
 
     goListaReserva() {
-        element(by.id('listar-reserva')).click()
+       return element(by.id('listar-reserva')).click()
     }
 
+    elementoTitle(){
+        return element(by.id('swal2-title'))
+    }
+
+    sweetAlert() {
+        browser.wait(EC.presenceOf(element(by.id('swal2-title'))))
+    }
+    
 }

@@ -8,9 +8,9 @@ describe('Navegar pagina principal', () => {
         principal = new Principal();
     });
 
-    it('Navegar pagina principal', function(){
+    it('Navegar pagina principal', function () {
         principal.goPrincipal()
     })
-   
-    
+
+
 })
